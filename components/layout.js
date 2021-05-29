@@ -9,7 +9,7 @@ const Layout = ({ children }) => {
         <title>Mustafa ÖZTÜRK</title>
       </Head>
       <Navbar />
-      <main className="p-2 bg-black h-5/6 w-10/12 rounded-lg shadow-2xl border border-gray-900">
+      <main className="sm:w-10/12 w-11/12 p-2 bg-black h-5/6  rounded-lg shadow-2xl border border-gray-900">
         {children}
       </main>
     </div>
