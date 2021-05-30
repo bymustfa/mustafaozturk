@@ -9,7 +9,12 @@ module.exports = {
         green: "#25ca7f",
       },
       fontFamily: {
-        consolas: ["Consolas", "Source Code", "Source Code Variable"],
+        inconsolata: [
+          "Inconsolata",
+          "monospace",
+          "Source Code",
+          "Source Code Variable",
+        ],
       },
     },
   },
