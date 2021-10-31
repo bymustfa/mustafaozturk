@@ -1,10 +1,22 @@
-import React from "react";
-import Link from "next/link";
+import NextLink from "next/link";
+import { Link } from "@chakra-ui/react";
 
-export default function A({ href, text, className }) {
-  return (
-    <Link href={href}>
-      <a className={className}>{text}</a>
-    </Link>
-  );
+export default function A({ href, text, ...props }) {
+  if (props?.isExternal) {
+    return (
+      <>
+        <Link href={href} {...props}>
+          {text}
+        </Link>
+      </>
+    );
+  } else {
+    return (
+      <>
+        <NextLink href={href}>
+          <Link {...props}>{text}</Link>
+        </NextLink>
+      </>
+    );
+  }
 }

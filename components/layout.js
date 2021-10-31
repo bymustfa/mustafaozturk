@@ -1,19 +1,42 @@
-import React from "react";
-import Navbar from "./navbar";
-import Head from "next/head";
+import { useState } from "react";
+import {
+  Container,
+  Divider,
+  Button,
+  Flex,
+  Box,
+  SlideFade,
+} from "@chakra-ui/react";
 
-const Layout = ({ children }) => {
+import Menu from "@/components/menu";
+import Social from "@/components/social";
+import A from "./a";
+
+function Layout({ children }) {
   return (
-    <div className="bg-lightBlack min-w-full flex flex-col items-center justify-self-start text-white h-screen py-2">
-      <Head>
-        <title>Mustafa ÖZTÜRK</title>
-      </Head>
-      <Navbar />
-      <main className="sm:w-10/12 w-11/12 p-2 bg-black h-5/6  rounded-lg shadow-2xl border border-gray-900">
+    <Box px={2}>
+      <Container maxW="container.lg" my={4} p={0}>
+        <Flex alignItems="center" justifyContent="space-between">
+          <Menu />
+          <Social />
+        </Flex>
+
+        <Divider my={2} />
+      </Container>
+
+      <Container
+        className="main"
+        border="1px"
+        borderColor="gray.600"
+        borderRadius="lg"
+        maxW="container.lg"
+        my={4}
+        p={4}
+      >
         {children}
-      </main>
-    </div>
+      </Container>
+    </Box>
   );
-};
+}
 
 export default Layout;

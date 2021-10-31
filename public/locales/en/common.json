@@ -1,7 +1,8 @@
 {
-  "about1": "I am interested in Computer since 2013. Before I became a developer, I worked as a graphic designer in Kastamonu. During this time, I had the experience of designing digitally for many platforms.",
-  "about2": "Software development was a hobby at first. Previously, the days were spent designing web pages, writing PHP functions and graphic design. After that, I quit graphic design and focused entirely on software development.",
-  "skils" : "Skils",
-  "projects" : "Projects",
-  "see_project" : "See Project"
+  "home": "Home",
+  "about": "About",
+  "portfolio": "Portfolio",
+  "contact": "Contact",
+  "open_project": "Open Project",
+  "resume" : "Resume"
 }

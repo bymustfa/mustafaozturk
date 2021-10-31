@@ -1,7 +1,8 @@
 {
-  "about1":"2013 yılından beri Bilgisayar ile ilgiliyim. Geliştirici olmadan önce Kastamonu'da grafikerlik yaptım. Bu süre boyunca bir çok platforma dijital olarak tasarım yapma tecrübem oldu.",
-  "about2":"Yazılım geliştirme ise ilk başlarda tamamen hobiydi. Önceleri günler web sayfaları tasarlamak, PHP foksiyonları yazmak ve grafikerlik ile geçiyordu. Sonrasında grafikerliği bırakarak tamamen yazılım geliştirmeye odaklandım",
-  "skils" : "Yetenekler",
-  "projects" : "Projeler",
-  "see_project" : "Projeyi Gör"
+  "home": "Giriş",
+  "about": "Hakkımda",
+  "portfolio": "Portfolyo",
+  "contact": "İletişim",
+  "open_project": "Projeyi Aç",
+  "resume" : "Özgeçmiş"
 }
