@@ -1,5 +1,4 @@
 import React from "react";
-import Link from "next/link";
 import Layout from "@/components/layout";
 import {
   Heading,
@@ -13,6 +12,7 @@ import {
   Image,
   Button,
 } from "@chakra-ui/react";
+
 import { Eye } from "@/components/icons";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import { useTranslation } from "next-i18next";
@@ -38,27 +38,16 @@ export default function About() {
               Mustafa ÖZTÜRK
             </Heading>
             {aboutText[router.locale]}
-
-            <Button
-              rightIcon={<Eye width={18} height={18} />}
-              color="gray.300"
-              borderColor="green.200"
-              variant="outline"
-              mt={5}
-              size="sm"
-            >
-              {t("resume")}
-            </Button>
           </Box>
         </Flex>
 
-        <Divider my={6} mt={12} />
+        <Divider my={6} mt={8} />
 
         <Flex>
           <Box w="50%" p={4}>
             <Center>
               <Heading as="h3" size="lg">
-                Deneyimlerim
+                {t("my_experiences")}
               </Heading>
             </Center>
             <Center>
@@ -86,7 +75,7 @@ export default function About() {
           <Box w="50%" p={4}>
             <Center>
               <Heading as="h3" size="lg">
-                Eğitimlerim
+                {t("my_trainings")}
               </Heading>
             </Center>
             <Center>

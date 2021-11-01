@@ -39,6 +39,11 @@ export const langs = [
     title: "NextJS",
     color: "#636e72",
   },
+  {
+    id: 9,
+    title: "React Native",
+    color: "#1bc3d2",
+  },
 ];
 
 export const portfolio = [
@@ -85,8 +90,69 @@ export const portfolio = [
       description: "E-commerce site. Full Stack PHP / Custom MVC structure",
     },
   },
+
+  {
+    id: 6,
+    lang: [7, 3, 9],
+    image: "/images/crue.png",
+    href: "",
+    tr: {
+      title: "Mobil Uygulama",
+      description: "Cruelty free konsept mobil uygulama",
+    },
+    en: {
+      title: "Mobile App",
+      description: "Cruelty free concept mobile application",
+    },
+  },
+
   {
     id: 4,
+    lang: [1, 2, 3, 4],
+    image: "/images/turksoy.png",
+    href: "https://turksoy.6harf.xyz/en",
+    tr: {
+      title: "Fullstack Web Tasarım ve Programlama (Yapım aşamasında)",
+      description: "E-ticaret sitesi. Fullstack PHP / Özel MVC yapısı",
+    },
+    en: {
+      title: "Full Stack Web Design and Programming (The under construction)",
+      description: "E-commerce site. Full Stack PHP / Custom MVC structure",
+    },
+  },
+
+  {
+    id: 6,
+    lang: [7, 3, 9],
+    image: "/images/person.png",
+    href: "",
+    tr: {
+      title: "Personel Takip Mobil Uygulama ",
+      description: "Personel izin takip sistemi",
+    },
+    en: {
+      title: "Personnel Tracking Mobile App",
+      description: "Personnel leave tracking system",
+    },
+  },
+
+  {
+    id: 7,
+    lang: [1, 2, 3, 4],
+    image: "/images/sigmoid.png",
+    href: "https://sigmoidstudio.com/",
+    tr: {
+      title: "Backend ve Veritabanı",
+      description: "Tasarım parçalama ve admin paneli entegrasyonu",
+    },
+    en: {
+      title: "Backend and Database",
+      description: "Design shredding and admin panel integration",
+    },
+  },
+
+  {
+    id: 5,
     lang: [1, 2, 3, 4],
     image: "/images/takipci.png",
     href: "",
@@ -101,8 +167,9 @@ export const portfolio = [
         "Follower Buying Site Backend and Frontend Web Design and Programming",
     },
   },
+
   {
-    id: 5,
+    id: 7,
     lang: [1, 2, 3, 4],
     image: "/images/sigmoid.png",
     href: "https://sigmoidstudio.com/",
@@ -116,7 +183,7 @@ export const portfolio = [
     },
   },
   {
-    id: 6,
+    id: 8,
     lang: [1, 2, 3, 4],
     image: "/images/teknik.png",
     href: "",
@@ -130,7 +197,7 @@ export const portfolio = [
     },
   },
   {
-    id: 7,
+    id: 9,
     lang: [1, 2, 3, 4],
     image: "/images/maro.png",
     href: "https://demo2.nevnes.com/maro/",
@@ -144,7 +211,7 @@ export const portfolio = [
     },
   },
   {
-    id: 7,
+    id: 10,
     lang: [1, 2, 3, 4],
     image: "/images/cv.png",
     href: "http://cvtikla.com/",
