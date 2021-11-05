@@ -92,7 +92,7 @@ export const portfolio = [
   },
 
   {
-    id: 6,
+    id: 4,
     lang: [7, 3, 9],
     image: "/images/crue.png",
     href: "",
@@ -107,7 +107,7 @@ export const portfolio = [
   },
 
   {
-    id: 4,
+    id: 5,
     lang: [1, 2, 3, 4],
     image: "/images/turksoy.png",
     href: "https://turksoy.6harf.xyz/en",
@@ -152,7 +152,7 @@ export const portfolio = [
   },
 
   {
-    id: 5,
+    id: 8,
     lang: [1, 2, 3, 4],
     image: "/images/takipci.png",
     href: "",
@@ -169,21 +169,7 @@ export const portfolio = [
   },
 
   {
-    id: 7,
-    lang: [1, 2, 3, 4],
-    image: "/images/sigmoid.png",
-    href: "https://sigmoidstudio.com/",
-    tr: {
-      title: "Backend ve Veritabanı",
-      description: "Tasarım parçalama ve admin paneli entegrasyonu",
-    },
-    en: {
-      title: "Backend and Database",
-      description: "Design shredding and admin panel integration",
-    },
-  },
-  {
-    id: 8,
+    id: 9,
     lang: [1, 2, 3, 4],
     image: "/images/teknik.png",
     href: "",
@@ -197,7 +183,7 @@ export const portfolio = [
     },
   },
   {
-    id: 9,
+    id: 10,
     lang: [1, 2, 3, 4],
     image: "/images/maro.png",
     href: "https://demo2.nevnes.com/maro/",
@@ -211,7 +197,7 @@ export const portfolio = [
     },
   },
   {
-    id: 10,
+    id: 11,
     lang: [1, 2, 3, 4],
     image: "/images/cv.png",
     href: "http://cvtikla.com/",
