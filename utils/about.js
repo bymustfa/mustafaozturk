@@ -25,44 +25,51 @@ export const aboutText = {
 };
 
 export const experiences = [
-  {
+    {
     id: 1,
+    title: "Fullstack Developer",
+    years: "2021 - Devam",
+    company: "Smartiks Yazılım A.Ş.",
+    location: "İSTANBUL",
+  },
+  {
+    id: 2,
     title: "Frontend Developer",
-    years: "2020 - Devam",
+    years: "2020 - 2021",
     company: "Gökkuşağı Yazılım ve Danışmanlık",
     location: "İSTANBUL",
   },
 
   {
-    id: 2,
+    id: 3,
     title: "Fullstack Developer",
     years: "2020 - 2021",
     company: "Litesoft Yazılım Hizmetleri A.Ş.",
     location: "İSTANBUL",
   },
   {
-    id: 3,
+    id: 4,
     title: "Fullstack Developer",
     years: "2019 - 2020",
     company: "Özel Bir Eğitim Kurumu",
     location: "İSTANBUL",
   },
   {
-    id: 4,
+    id: 5,
     title: "Web Tasarım Stajyeri",
     years: "2016 - Yaz",
     company: "Teknorium ARD Bilgisayar",
     location: "MERSİN",
   },
   {
-    id: 5,
+    id: 6,
     title: "Bilgi işlem Satjyeri",
     years: "2014 - 2015",
     company: "İl Özel İdaresi",
     location: "KASTAMONU",
   },
   {
-    id: 6,
+    id: 7,
     title: "Grafik ve Web Tasarım Uzmanı",
     years: "2012 - 2018",
     company: "Teknik Reklam",
