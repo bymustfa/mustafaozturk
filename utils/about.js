@@ -63,7 +63,7 @@ export const experiences = [
   },
   {
     id: 6,
-    title: "Bilgi işlem Satjyeri",
+    title: "Bilgi işlem Stajyeri",
     years: "2014 - 2015",
     company: "İl Özel İdaresi",
     location: "KASTAMONU",
