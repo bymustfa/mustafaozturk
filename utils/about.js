@@ -25,10 +25,17 @@ export const aboutText = {
 };
 
 export const experiences = [
+{
+    id: 0,
+    title: "Frontend Developer",
+    years: "2022 - Devam",
+    company: "Vodafone Telekomünikasyon A.Ş.",
+    location: "İSTANBUL",
+  },
     {
     id: 1,
     title: "Fullstack Developer",
-    years: "2021 - Devam",
+    years: "2021 - 2022",
     company: "Smartiks Yazılım A.Ş.",
     location: "İSTANBUL",
   },
