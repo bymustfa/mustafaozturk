@@ -1,9 +1,9 @@
-import { Button } from "@nextui-org/react";
+import Layout from "../components/shared/Layout";
+import { useTranslation } from "react-i18next";
 
-export default function Home() {
-  return (
-    <div>
-      <Button>AA</Button>
-    </div>
-  );
-}
+const Home = () => {
+  const { t } = useTranslation();
+  return <Layout>{t("hello")}</Layout>;
+};
+
+export default Home;
