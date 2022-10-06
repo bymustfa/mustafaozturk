@@ -1,14 +1,13 @@
-import React from "react";
-import "@/assets/css/style.scss";
-import { ChakraProvider } from "@chakra-ui/react";
-import { appWithTranslation } from "next-i18next";
-import theme from "@/utils/theme";
+import { createTheme, NextUIProvider } from "@nextui-org/react";
+import { ThemeProvider as NextThemesProvider } from "next-themes";
 
 function MyApp({ Component, pageProps }) {
   return (
-    <ChakraProvider theme={theme}>
+    <NextUIProvider>
+      {" "}
       <Component {...pageProps} />
-    </ChakraProvider>
+    </NextUIProvider>
   );
 }
-export default appWithTranslation(MyApp);
+
+export default MyApp;
