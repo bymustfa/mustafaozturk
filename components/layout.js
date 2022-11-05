@@ -1,16 +1,7 @@
-import { useState } from "react";
-import {
-  Container,
-  Divider,
-  Button,
-  Flex,
-  Box,
-  SlideFade,
-} from "@chakra-ui/react";
+import { Container, Divider, Flex, Box } from "@chakra-ui/react";
 
 import Menu from "@/components/menu";
 import Social from "@/components/social";
-import A from "./a";
 
 function Layout({ children }) {
   return (
