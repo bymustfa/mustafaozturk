@@ -1,15 +1,6 @@
 import React from "react";
 import Image from "next/image";
-import {
-  Box,
-  Center,
-  Heading,
-  Text,
-  Stack,
-  Button,
-  Link,
-  useColorModeValue,
-} from "@chakra-ui/react";
+import { Box, Text, Stack, Link, useColorModeValue } from "@chakra-ui/react";
 import cn from "classnames";
 import { ExternalLink } from "@/components/icons";
 import Tilt from "react-tilt";
@@ -44,9 +35,12 @@ export default function Card({ item }) {
                 layout="fill"
                 objectFit="contain"
                 quality={100}
+                placeholder="blur"
+                blurDataURL={`data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAJYAAACWBAMAAADOL2zRAAAAG1BMVEXMzMyWlpaqqqq3t7fFxcW+vr6xsbGjo6OcnJyLKnDGAAAACXBIWXMAAA7EAAAOxAGVKw4bAAABAElEQVRoge3SMW+DMBiE4YsxJqMJtHOTITPeOsLQnaodGImEUMZEkZhRUqn92f0MaTubtfeMh/QGHANEREREREREREREtIJJ0xbH299kp8l8FaGtLdTQ19HjofxZlJ0m1+eBKZcikd9PWtXC5DoDotRO04B9YOvFIXmXLy2jEbiqE6Df7DTleA5socLqvEFVxtJyrpZFWz/pHM2CVte0lS8g2eDe6prOyqPglhzROL+Xye4tmT4WvRcQ2/m81p+/rdguOi8Hc5L/8Qk4vhZzy08DduGt9eVQyP2qoTM1zi0/uf4hvBWf5c77e69Gf798y08L7j0RERERERERERH9P99ZpSVRivB/rgAAAABJRU5ErkJggg==`}
               />
             )}
           </Box>
+
           <Stack>
             <Text
               color={"green.400"}
@@ -60,6 +54,7 @@ export default function Card({ item }) {
             </Text>
             <Text color={"gray.300"}>{item.description}</Text>
           </Stack>
+
           <Stack mt={6} direction={"row"} spacing={4} align={"center"}>
             {item.href.trim().length > 0 && (
               <Link
