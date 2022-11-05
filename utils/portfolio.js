@@ -49,6 +49,20 @@ export const langs = [
 export const portfolio = [
   {
     id: 1,
+    lang: [9, 5, 3],
+    image: "/images/rickandmoryapp.png",
+    href: "https://play.google.com/store/apps/details?id=com.bymustfa.rickandmortycharacters",
+    tr: {
+      title: "Mobil Uygulama",
+      description: "Rick and Morty dizisindeki tüm karakterleri inceleyebilirsiniz. Favori karakterinizin detaylarına bakabilir veya istediğiniz karakteri arayabilirsiniz.",
+    },
+    en: {
+      title: "Mobile App",
+      description: "You can examine all the characters in the Rick and Morty series. You can look at the details of your favorite character or search for the character you want.",
+    },
+  },
+  {
+    id: 10,
     lang: [7, 8, 1, 2, 3],
     image: "/images/litesoft.png",
     href: "https://litesoft.com.tr/",
@@ -62,7 +76,7 @@ export const portfolio = [
     },
   },
   {
-    id: 2,
+    id: 20,
     lang: [1, 2, 3, 4],
     image: "/images/gokkusagi.png",
     href: "https://gokkusagiyazilim.com.tr/",
@@ -77,7 +91,7 @@ export const portfolio = [
   },
 
   {
-    id: 3,
+    id: 30,
     lang: [1, 2, 3, 4],
     image: "/images/prec.png",
     href: "https://precaumed.com/tr",
@@ -92,7 +106,7 @@ export const portfolio = [
   },
 
   {
-    id: 4,
+    id: 40,
     lang: [7, 3, 9],
     image: "/images/crue.png",
     href: "",
@@ -107,7 +121,7 @@ export const portfolio = [
   },
 
   {
-    id: 5,
+    id: 50,
     lang: [1, 2, 3, 4],
     image: "/images/turksoy.png",
     href: "https://turksoy.6harf.xyz/en",
@@ -122,7 +136,7 @@ export const portfolio = [
   },
 
   {
-    id: 6,
+    id: 60,
     lang: [7, 3, 9],
     image: "/images/person.png",
     href: "",
@@ -137,7 +151,7 @@ export const portfolio = [
   },
 
   {
-    id: 7,
+    id: 70,
     lang: [1, 2, 3, 4],
     image: "/images/sigmoid.png",
     href: "https://sigmoidstudio.com/",
@@ -152,7 +166,7 @@ export const portfolio = [
   },
 
   {
-    id: 8,
+    id: 80,
     lang: [1, 2, 3, 4],
     image: "/images/takipci.png",
     href: "",
@@ -169,7 +183,7 @@ export const portfolio = [
   },
 
   {
-    id: 9,
+    id: 90,
     lang: [1, 2, 3, 4],
     image: "/images/teknik.png",
     href: "",
@@ -183,7 +197,7 @@ export const portfolio = [
     },
   },
   {
-    id: 10,
+    id: 100,
     lang: [1, 2, 3, 4],
     image: "/images/maro.png",
     href: "https://demo2.nevnes.com/maro/",
@@ -197,7 +211,7 @@ export const portfolio = [
     },
   },
   {
-    id: 11,
+    id: 110,
     lang: [1, 2, 3, 4],
     image: "/images/cv.png",
     href: "http://cvtikla.com/",
