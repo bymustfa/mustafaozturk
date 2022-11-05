@@ -1,5 +1,4 @@
 import * as React from "react";
-
 function SvgEye(props) {
   return (
     <svg
@@ -20,5 +19,4 @@ function SvgEye(props) {
     </svg>
   );
 }
-
 export default SvgEye;

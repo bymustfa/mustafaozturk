@@ -1,38 +1,36 @@
 import React from "react";
-import { Github, İnstagram, Twitter } from "@/components/icons";
+import { Github, Instagram, Twitter } from "@/components/icons";
+
+//2013 yılından beri PHP ve C# ile uğraşıyorum. 2015 yılında hobi olarak
+//       oyun geliştirme, 2018 yılında Node JS ve React JS teknolojilerine
+//       ilgilenmeye başladım. React, React Native, PHP, Python vb. birçok kişi ve
+//       kuruma mobil çözümler geliştirdim.
+
+const myAge = () => {
+  const today = new Date();
+  const birthDate = new Date("1997-02-03");
+  let age = today.getFullYear() - birthDate.getFullYear();
+  const m = today.getMonth() - birthDate.getMonth();
+  if (m < 0 || (m === 0 && today.getDate() < birthDate.getDate())) {
+    age--;
+  }
+  return age;
+};
 
 export const aboutText = {
-  tr: (
-    <>
-      <p>
-        2013 yılından beri PHP ve C# ile uğraşıyorum. 2015 yılında hobi olarak
-        oyun geliştirme, 2018 yılında Node JS ve React JS teknolojilerine
-        ilgilenmeye başladım. React, React Native, PHP, Python vb. birçok kişi
-        ve kuruma mobil çözümler geliştirdim.
-      </p>
-    </>
-  ),
-  en: (
-    <>
-      <p>
-        I've been dealing with PHP and C# since 2013. As a hobby in 2015 game
-        development, Node JS and React JS technologies in 2018 I started to
-        care. React, React Native, PHP, Python etc. many people and I developed
-        mobile solutions for the institution.
-      </p>
-    </>
-  ),
+  tr: myAge() + " yaşında. Full Stack Geliştirici.",
+  en: myAge() + " years old. Full Stack Developer.",
 };
 
 export const experiences = [
-{
+  {
     id: 0,
     title: "Frontend Developer",
     years: "2022 - Devam",
     company: "Vodafone Telekomünikasyon A.Ş.",
     location: "İSTANBUL",
   },
-    {
+  {
     id: 1,
     title: "Fullstack Developer",
     years: "2021 - 2022",
@@ -123,7 +121,7 @@ export const social = [
   {
     id: 3,
     text: "Instagram",
-    icon: <İnstagram />,
+    icon: <Instagram />,
     href: "https://www.instagram.com/bymustfa/",
   },
 ];

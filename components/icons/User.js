@@ -1,5 +1,5 @@
 import * as React from "react";
-function SvgExternalLink(props) {
+function SvgUser(props) {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -14,8 +14,9 @@ function SvgExternalLink(props) {
       className=""
       {...props}
     >
-      <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3" />
+      <path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2" />
+      <circle cx={12} cy={7} r={4} />
     </svg>
   );
 }
-export default SvgExternalLink;
+export default SvgUser;

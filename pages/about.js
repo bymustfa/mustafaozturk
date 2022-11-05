@@ -16,6 +16,7 @@ import { useTranslation } from "next-i18next";
 import { aboutText, experiences, educations } from "@/utils/about";
 import { useRouter } from "next/router";
 import useWindowSize from "../hooks/useWindowSize";
+import AnimatedText from "react-animated-text-content";
 
 const BREAKPOINT = 945;
 
@@ -26,19 +27,31 @@ export default function About() {
 
   return (
     <Layout>
-      <Flex>
-        <Box w="25%" p={4}>
+      <Flex alignItems="center">
+        <Box w="30%" p={4}>
           <Image
-            borderRadius="300"
-            src="/images/myImage.jpg"
+            borderRadius={6}
+            src="/images/me.png"
             alt="Mustafa ÖZTÜRK"
+            boxShadow="lg"
           />
         </Box>
-        <Box w="75%" p={4}>
+        <Box w="70%" p={4}>
           <Heading as="h2" size="lg" mb={3}>
             Mustafa ÖZTÜRK
           </Heading>
-          {aboutText[router.locale]}
+          <AnimatedText
+            type="chars"
+            interval={0.04}
+            duration={0.8}
+            animation={{
+              y: "100px",
+              ease: "ease",
+              scale: -0.52,
+            }}
+          >
+            {aboutText[router.locale]}
+          </AnimatedText>
         </Box>
       </Flex>
 

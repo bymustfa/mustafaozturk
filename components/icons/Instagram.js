@@ -1,5 +1,5 @@
 import * as React from "react";
-function SvgExternalLink(props) {
+function SvgInstagram(props) {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -14,8 +14,9 @@ function SvgExternalLink(props) {
       className=""
       {...props}
     >
-      <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3" />
+      <rect x={2} y={2} width={20} height={20} rx={5} ry={5} />
+      <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37zM17.5 6.5h.01" />
     </svg>
   );
 }
-export default SvgExternalLink;
+export default SvgInstagram;

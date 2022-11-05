@@ -1,5 +1,4 @@
 import * as React from "react";
-
 function SvgTwitter(props) {
   return (
     <svg
@@ -19,5 +18,4 @@ function SvgTwitter(props) {
     </svg>
   );
 }
-
 export default SvgTwitter;

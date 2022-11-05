@@ -1,5 +1,4 @@
 import * as React from "react";
-
 function SvgGithub(props) {
   return (
     <svg
@@ -19,5 +18,4 @@ function SvgGithub(props) {
     </svg>
   );
 }
-
 export default SvgGithub;
