@@ -126,11 +126,11 @@ export const portfolio = [
     image: "/images/turksoy.png",
     href: "https://turksoy.6harf.xyz/en",
     tr: {
-      title: "Fullstack Web Tasarım ve Programlama (Yapım aşamasında)",
+      title: "Fullstack Web Tasarım ve Programlama",
       description: "Fullstack PHP / Özel MVC yapısı",
     },
     en: {
-      title: "Full Stack Web Design and Programming (The under construction)",
+      title: "Full Stack Web Design and Programming",
       description: "Full Stack PHP / Custom MVC structure",
     },
   },
