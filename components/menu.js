@@ -27,6 +27,7 @@ export default function Menu() {
               text={item.icon}
               href={item.href}
               p={4}
+              pl={0}
               display="block"
               className={asPath === item.href && "active"}
               color={asPath === item.href && "green.200"}
