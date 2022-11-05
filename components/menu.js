@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import { Button, Flex, Tooltip, Box } from "@chakra-ui/react";
+import React from "react";
+import { Flex, Tooltip, Box } from "@chakra-ui/react";
 import { getMenus } from "@/utils/menus";
 import { useRouter } from "next/router";
 import A from "./a";
@@ -7,8 +7,6 @@ import A from "./a";
 export default function Menu() {
   const { asPath } = useRouter();
   const menus = getMenus();
-
-  console.log("menus", menus);
 
   return (
     <Flex alignItems="center">

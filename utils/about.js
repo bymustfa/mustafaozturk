@@ -17,7 +17,7 @@ const myAge = () => {
   return age;
 };
 
-export const aboutText = {
+export const aboutTexts = {
   tr: myAge() + " yaşında. Full Stack Geliştirici.",
   en: myAge() + " years old. Full Stack Developer.",
 };
