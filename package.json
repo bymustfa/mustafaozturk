@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev": " NODE_OPTIONS='--openssl-legacy-provider' next dev",
     "build": "next build",
     "start": "next start",
     "svgr": "svgr ./icons -d ./components/icons  --icon --svg-props \"width=24,height=24,className=\""
