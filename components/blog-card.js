@@ -1,25 +1,33 @@
 import React from "react";
 import Image from "next/image";
-import { Box, Text, Stack, Link, useColorModeValue } from "@chakra-ui/react";
-import cn from "classnames";
+import {
+  Box,
+  Text,
+  Stack,
+  Link,
+  Flex,
+  useColorModeValue,
+} from "@chakra-ui/react";
 import { ExternalLink } from "@/components/icons";
 import Tilt from "react-tilt";
-
 import { useTranslation } from "next-i18next";
 
-export default function Card({ item }) {
+export default function BlogCard({ item }) {
   const { t } = useTranslation("common");
   return (
     <Tilt className="Tilt" options={{ max: 15 }}>
-      <Box py={6}>
+      <Box py={6} h="100%">
         <Box
           boxShadow="dark-lg"
           w={300}
+          h="100%"
           bg={useColorModeValue("white", "gray.900")}
           rounded={"md"}
           p={6}
+          pb={12}
           overflow={"hidden"}
           className="card-hover"
+          position="relative"
         >
           <Box
             h={"190px"}
@@ -29,9 +37,9 @@ export default function Card({ item }) {
             mb={6}
             pos={"relative"}
           >
-            {item.image && (
+            {item.thumbnail && (
               <Image
-                src={item.image}
+                src={item.thumbnail}
                 layout="fill"
                 objectFit="contain"
                 quality={100}
@@ -52,37 +60,25 @@ export default function Card({ item }) {
             >
               {item.title}
             </Text>
-            <Text color={"gray.300"}>{item.description}</Text>
           </Stack>
 
-          <Stack mt={6} direction={"row"} spacing={4} align={"center"}>
-            {item.href.trim().length > 0 && (
-              <Link
-                isExternal
-                className="preview"
-                color="green.400"
-                href={item.href}
-              >
-                <span>{t("open_project")}</span>
-                <ExternalLink width={15} height={15} />
+          <Stack
+            mt={6}
+            direction={"row"}
+            spacing={4}
+            align={"center"}
+            position="absolute"
+            bottom={5}
+            left={5}
+          >
+            {item.link.trim().length > 0 && (
+              <Link isExternal color="green.400" href={item.link}>
+                <Flex alignItems="center">
+                  <Text mr={2}>{t("read_more")}</Text>
+                  <ExternalLink width={15} height={15} />
+                </Flex>
               </Link>
             )}
-
-            <ul
-              className={cn([
-                "langs",
-                item.href.trim().length === 0 && "no-hide",
-              ])}
-            >
-              {item.lang.map((x) => {
-                if (x)
-                  return (
-                    <li key={x.id}>
-                      <span style={{ backgroundColor: x.color }} /> {x.title}
-                    </li>
-                  );
-              })}
-            </ul>
           </Stack>
         </Box>
       </Box>

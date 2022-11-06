@@ -1,13 +1,13 @@
 import React, { useEffect, useState } from "react";
 import { useRouter } from "next/router";
 import Layout from "@/components/layout";
-import Card from "@/components/card";
+import PortfolioCard from "@/components/portfolio-card";
 import { useTranslation } from "next-i18next";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import { langs, portfolio } from "@/utils/portfolio";
 import { useAutoAnimate } from "@formkit/auto-animate/react";
 
-export default function Home() {
+export default function Portfolio() {
   const router = useRouter();
   const { t } = useTranslation("common");
 
@@ -36,7 +36,7 @@ export default function Home() {
       <Layout>
         <div className="portfolio" ref={parent}>
           {portfolioDatas.map((item) => (
-            <Card key={item.id} item={item} />
+            <PortfolioCard key={item.id} item={item} />
           ))}
         </div>
       </Layout>

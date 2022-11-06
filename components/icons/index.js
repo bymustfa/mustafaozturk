@@ -1,3 +1,4 @@
+export { default as Book } from './Book'
 export { default as ExternalLink } from './ExternalLink'
 export { default as Eye } from './Eye'
 export { default as Github } from './Github'
