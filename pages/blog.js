@@ -13,7 +13,6 @@ export default function Blog() {
       const res = await fetch(BLOG_URL);
       const data = await res.json();
       if (data.status === "ok") {
-        console.log("items", data.items);
         setPosts(data.items);
       }
     } catch (error) {
