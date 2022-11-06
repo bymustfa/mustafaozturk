@@ -40,7 +40,7 @@ export const experiences = [
   {
     id: 2,
     title: "Frontend Developer",
-    years: "2020 - 2021",
+    years: "2021",
     company: "Gökkuşağı Yazılım ve Danışmanlık",
     location: "İSTANBUL",
   },
