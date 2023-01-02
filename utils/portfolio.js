@@ -49,6 +49,20 @@ export const langs = [
 export const portfolio = [
   {
     id: 1,
+    lang: [7, 8, 5, 4],
+    image: "/images/bykticaret.png",
+    href: "http://bykticaret.com/",
+    tr: {
+      title: "Mikro Eticaret Uygulaması",
+      description: "Temel düzey ürün tanıtım ve portfolyo sitesi.",
+    },
+    en: {
+      title: "Micro E-commerce App",
+      description: "Basic product promotion and portfolio site.",
+    },
+  },
+  {
+    id: 5,
     lang: [9, 5, 3],
     image: "/images/rickandmoryapp.png",
     href: "https://play.google.com/store/apps/details?id=com.bymustfa.rickandmortycharacters",
