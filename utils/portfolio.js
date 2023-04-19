@@ -50,7 +50,7 @@ export const portfolio = [
   {
     id: 1,
     lang: [7, 8, 5, 4],
-    image: "/images/bykticaret.png",
+    image: "/images/projects/bykticaret.png",
     href: "http://bykticaret.com/",
     tr: {
       title: "Mikro Eticaret Uygulaması",
@@ -64,21 +64,23 @@ export const portfolio = [
   {
     id: 5,
     lang: [9, 5, 3],
-    image: "/images/rickandmoryapp.png",
+    image: "/images/projects/rickandmoryapp.png",
     href: "https://play.google.com/store/apps/details?id=com.bymustfa.rickandmortycharacters",
     tr: {
       title: "Mobil Uygulama",
-      description: "Rick and Morty dizisindeki tüm karakterleri inceleyebilirsiniz. Favori karakterinizin detaylarına bakabilir veya istediğiniz karakteri arayabilirsiniz.",
+      description:
+        "Rick and Morty dizisindeki tüm karakterleri inceleyebilirsiniz. Favori karakterinizin detaylarına bakabilir veya istediğiniz karakteri arayabilirsiniz.",
     },
     en: {
       title: "Mobile App",
-      description: "You can examine all the characters in the Rick and Morty series. You can look at the details of your favorite character or search for the character you want.",
+      description:
+        "You can examine all the characters in the Rick and Morty series. You can look at the details of your favorite character or search for the character you want.",
     },
   },
   {
     id: 10,
     lang: [7, 8, 1, 2, 3],
-    image: "/images/litesoft.png",
+    image: "/images/projects/litesoft.png",
     href: "https://litesoft.com.tr/",
     tr: {
       title: "Web Tasarımı ve Programlama",
@@ -92,7 +94,7 @@ export const portfolio = [
   {
     id: 20,
     lang: [1, 2, 3, 4],
-    image: "/images/gokkusagi.png",
+    image: "/images/projects/gokkusagi.png",
     href: "https://gokkusagiyazilim.com.tr/",
     tr: {
       title: "Web Tasarımı ve Programlama",
@@ -107,7 +109,7 @@ export const portfolio = [
   {
     id: 30,
     lang: [1, 2, 3, 4],
-    image: "/images/prec.png",
+    image: "/images/projects/prec.png",
     href: "https://precaumed.com/tr",
     tr: {
       title: "Fullstack Web Tasarım ve Programlama",
@@ -122,7 +124,7 @@ export const portfolio = [
   {
     id: 40,
     lang: [7, 3, 9],
-    image: "/images/crue.png",
+    image: "/images/projects/crue.png",
     href: "",
     tr: {
       title: "Mobil Uygulama",
@@ -137,7 +139,7 @@ export const portfolio = [
   {
     id: 50,
     lang: [1, 2, 3, 4],
-    image: "/images/turksoy.png",
+    image: "/images/projects/turksoy.png",
     href: "https://turksoy.6harf.xyz/en",
     tr: {
       title: "Fullstack Web Tasarım ve Programlama",
@@ -152,7 +154,7 @@ export const portfolio = [
   {
     id: 60,
     lang: [7, 3, 9],
-    image: "/images/person.png",
+    image: "/images/projects/person.png",
     href: "",
     tr: {
       title: "Personel Takip Mobil Uygulama ",
@@ -167,7 +169,7 @@ export const portfolio = [
   {
     id: 70,
     lang: [1, 2, 3, 4],
-    image: "/images/sigmoid.png",
+    image: "/images/projects/sigmoid.png",
     href: "https://sigmoidstudio.com/",
     tr: {
       title: "Backend ve Veritabanı",
@@ -182,7 +184,7 @@ export const portfolio = [
   {
     id: 80,
     lang: [1, 2, 3, 4],
-    image: "/images/takipci.png",
+    image: "/images/projects/takipci.png",
     href: "",
     tr: {
       title: "Web Tasarımı ve Programlama",
@@ -199,7 +201,7 @@ export const portfolio = [
   {
     id: 90,
     lang: [1, 2, 3, 4],
-    image: "/images/teknik.png",
+    image: "/images/projects/teknik.png",
     href: "",
     tr: {
       title: "Fullstack Web Tasarım ve Programlama",
@@ -213,7 +215,7 @@ export const portfolio = [
   {
     id: 100,
     lang: [1, 2, 3, 4],
-    image: "/images/maro.png",
+    image: "/images/projects/maro.png",
     href: "https://demo2.nevnes.com/maro/",
     tr: {
       title: "Backend ve Çoklu Dil Yapısı",
@@ -227,7 +229,7 @@ export const portfolio = [
   {
     id: 110,
     lang: [1, 2, 3, 4],
-    image: "/images/cv.png",
+    image: "/images/projects/cv.png",
     href: "http://cvtikla.com/",
     tr: {
       title: "Fullstack Web Tasarım ve Programlama",
