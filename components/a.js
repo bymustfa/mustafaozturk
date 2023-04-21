@@ -4,19 +4,15 @@ import { Link } from "@chakra-ui/react";
 export default function A({ href, text, ...props }) {
   if (props?.isExternal) {
     return (
-      <>
-        <Link href={href} {...props}>
-          {text}
-        </Link>
-      </>
+      <Link href={href} {...props}>
+        {text}
+      </Link>
     );
   } else {
     return (
-      <>
-        <NextLink href={href}>
-          <Link {...props}>{text}</Link>
-        </NextLink>
-      </>
+      <NextLink href={href} passHref>
+        <Link {...props}>{text}</Link>
+      </NextLink>
     );
   }
 }
