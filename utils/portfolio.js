@@ -216,7 +216,7 @@ export const portfolio = [
     id: 100,
     lang: [1, 2, 3, 4],
     image: "/images/projects/maro.png",
-    href: "https://demo2.nevnes.com/maro/",
+    href: "https://maro.com.tr/tr-tr",
     tr: {
       title: "Backend ve Çoklu Dil Yapısı",
       description: "Tasarım parçalama ve admin paneli entegrasyonu",
