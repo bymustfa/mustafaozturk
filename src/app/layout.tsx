@@ -48,25 +48,25 @@ export const metadata: Metadata = {
   ],
   creator: "Mustafa ÖZTÜRK",
 
-  // openGraph: {
-  //   type: "website",
-  //   locale: "en_US",
-  //   url: siteConfig.url,
-  //   title: siteConfig.name,
-  //   description: siteConfig.description,
-  //   images: [`${siteConfig.url}/og-image.png`],
-  //   siteName: siteConfig.name,
-  // },
-  // twitter: {
-  //   card: "summary_large_image",
-  //   title: siteConfig.name,
-  //   description: siteConfig.description,
-  //   images: [`${siteConfig.url}/og-image.png`],
-  //   creator: "@Taquiimam14",
-  // },
-  // icons: {
-  //   icon: "/favicon.ico",
-  // },
+  openGraph: {
+    type: "website",
+    locale: "en_US",
+    url: siteConfig.url,
+    title: siteConfig.name,
+    description: siteConfig.description,
+    images: [`${siteConfig.url}/images/me.jpg`],
+    siteName: siteConfig.name,
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: siteConfig.name,
+    description: siteConfig.description,
+    images: [`${siteConfig.url}/images/me.jpg`],
+    creator: "@_bymustfa",
+  },
+  icons: {
+    icon: "/favicon.ico",
+  },
 };
 
 export default function RootLayout({
