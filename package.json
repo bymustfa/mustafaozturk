@@ -3,30 +3,37 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": " NODE_OPTIONS='--openssl-legacy-provider' next dev -p 3008",
+    "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "svgr": "svgr ./icons -d ./components/icons  --icon --svg-props \"width=24,height=24,className=\""
+    "lint": "next lint"
   },
   "dependencies": {
-    "@chakra-ui/icons": "^1.0.15",
-    "@chakra-ui/react": "^1.6.7",
-    "@emotion/react": "11",
-    "@emotion/styled": "11",
-    "@formkit/auto-animate": "^1.0.0-beta.3",
-    "@vercel/analytics": "^1.0.0",
-    "classnames": "^2.3.1",
-    "framer-motion": "4",
-    "next": "11.1.2",
-    "next-i18next": "^8.9.0",
-    "react": "17.0.2",
-    "react-animated-text-content": "^1.0.1",
-    "react-dom": "17.0.2",
-    "react-tilt": "^0.1.4",
-    "rxjs": "^7.4.0",
-    "sass": "^1.40.1"
+    "@radix-ui/react-label": "^2.0.2",
+    "@radix-ui/react-toast": "^1.1.5",
+    "@radix-ui/react-tooltip": "^1.0.7",
+    "@vercel/og": "^0.5.20",
+    "class-variance-authority": "^0.7.0",
+    "clsx": "^2.0.0",
+    "framer-motion": "^11.2.13",
+    "lucide-react": "^0.292.0",
+    "next": "14.0.2",
+    "react": "^18",
+    "react-dom": "^18",
+    "resend": "^0.16.0",
+    "tailwind-merge": "^2.0.0",
+    "tailwindcss-animate": "^1.0.7"
   },
   "devDependencies": {
-    "@svgr/cli": "^5.5.0"
+    "@types/node": "^20",
+    "@types/react": "^18",
+    "@types/react-dom": "^18",
+    "autoprefixer": "^10.0.1",
+    "eslint": "^8",
+    "eslint-config-next": "14.0.2",
+    "postcss": "^8",
+    "prettier": "^3.3.3",
+    "tailwindcss": "^3.3.0",
+    "typescript": "^5"
   }
 }

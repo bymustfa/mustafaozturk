@@ -1,10 +1,10 @@
-const { i18n } = require("./next-i18next.config");
+/** @type {import('next').NextConfig} */
+const nextConfig = {
+    experimental:{
+        serverComponentsExternalPackages: [
+            '@react-email/render',
+        ]
+    }
+}
 
-// add hostname cdn-images-1.medium.com
-
-module.exports = {
-  i18n,
-  images: {
-    domains: ["cdn-images-1.medium.com"],
-  },
-};
+module.exports = nextConfig
