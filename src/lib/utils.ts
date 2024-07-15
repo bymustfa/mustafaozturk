@@ -10,6 +10,7 @@ export const siteConfig = {
   name: "Mustafa ÖZTÜRK",
   description: "I am a Software Developer",
   logo: logo,
+  url: "https://mustafaozturk.kim",
 };
 
 export interface IPorjects {
