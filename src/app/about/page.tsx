@@ -1,19 +1,10 @@
-import Aboutfooter from "@/components/Aboutfooter";
 import FramerWrapper from "@/components/FramerWrapper";
 import Heading from "@/components/Heading";
 import { Badge } from "@/components/ui/badge";
-import { Circle, Heart, User2 } from "lucide-react";
-const page = () => {
-  const items = [
-    { hobby: "coding" },
-    { hobby: "playing games" },
-    { hobby: "Watching Anima" },
-    { hobby: "Tech Blog writing" },
-    { hobby: "creating Cool Projects" },
-  ];
+import { User2 } from "lucide-react";
 
+const page = () => {
   return (
-    // ABOUT PAGE
     <div className="h-full w-full relative flex flex-col items-start gap-5 overflow-hidden border px-16 py-8 rounded backdrop-blur-sm">
       <Badge className=" gap-2">
         <User2 className="h-5 w-5" />

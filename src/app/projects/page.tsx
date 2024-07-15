@@ -3,79 +3,57 @@ import Heading from "@/components/Heading";
 import ProjectCards from "@/components/ProjectsCard";
 import { Badge } from "@/components/ui/badge";
 import { Layers } from "lucide-react";
+import { IPorjects } from "@/lib/utils";
 
 const projectsPage = () => {
-  // PROJECTS DATA
-  const Projects = [
+  const Projects: IPorjects[] = [
     {
-      title: "FriendZ - A social media Platform",
+      title: "Yanımda Premium | Vodafone",
       description:
-        "FriendZ is a social media app made with modern tech stacks such as redis, Authjs etc. A user can Create, delete, like, comment Post. ",
-      tags: ["Redis", "Authjs", "Typescript", "Nextjs"],
-      link: "https://github.com/taqui-786/project-friendz",
+        "I worked as a front end developer in the Yanimda Premium project, where privileges were provided to Vodafone's customers.",
+      tags: ["Typescript", "Nextjs"],
+      link: "https://www.vodafone.com.tr/premium",
     },
+
     {
-      title: "itZmyLink- One Page many Links",
+      title: "Evde Internet | Vodafone",
       description:
-        "itZmyLink is a simple platform where user can create a personalized page to showcase all your social media profiles in one place. ",
-      tags: ["Nextjs", "Typescript", "Shadcn Ui"],
-      link: "https://github.com/taqui-786/itZmyLink",
+        "I worked as frontend and devops for the OSS project used by Vodafone Home Internet users.",
+      tags: ["Nextjs", "Typescript"],
+      link: "https://www.vodafone.com.tr/evdeinternet",
     },
+
     {
-      title: "GitEstimate- Github estimate worth generator",
+      title: "NDK Danışmanlık",
       description:
-        "GitEstimate is a simple fun tool where user can generate their github estimate worth card just by entering their github username. ",
-      tags: ["Nextjs", "Typescript", "Shadcn Ui"],
-      link: "https://github.com/taqui-786/GitEstimate",
+        "A multi-purpose platform that brings together psychologists and counselors.",
+      tags: ["Nextjs", "Typescript", "Express JS", "MongoDB", "Tailwind CSS"],
+      link: "https://ndkdanismanlik.com/",
     },
+
     {
-      title: "Mixcn-ui- Reusable components for Nextjs",
-      description:
-        "This is Nextjs app with a Collection of Nextjs Components - (Currently under Devlelopment) ",
-      tags: ["Nextjs", "Shadcnui", "Npx","Library"],
-      link: "https://mixcn-ui.vercel.app",
+      title: "Horozoglu Consultants",
+      description: "Financial consultancy and management project",
+      tags: ["PHP", "Mysql", "Bootstrap", "Laravel"],
+      link: "horozogluconsultants.com",
     },
+
     {
-      title: "Rupeespot- All deals Product in one place",
-      description:
-        "This is a free tool to check price history charts for millions of products for popular Indian stores such as Amazon and Flipkart. ",
-      tags: ["Nextjs", "Freelancing", "MySQL"],
-      link: "https://rupeespot.com/",
+      title: "BYK",
+      description: "Health supplies e-commerce platform",
+      tags: ["PHP", "Nextjs", "Typescript", "MongoDB", "Tailwind CSS"],
     },
-    
+
     {
-      title: "KryptoKapital- Investing in Cryptocurreny",
-      description:
-        "This is a platform for learning about cryptocurrency with many tools and festures. It is very big project. ",
-      tags: ["Nextjs", "Freelancing", "Supabase"],
-      link: "https://devkryptokapital.netlify.app/",
-    },
-    {
-      title: "ChatApp- Simple instagram clone",
-      description:
-        "ChatApp is similar to instagram, you can create, edit, delete, like,comment, post and  Follow, unfollow users",
-      tags: ["Reactjs", "Javascript"],
-      link: "https://github.com/taqui-786/chatapp-api",
-    },
-    {
-      title: "Devletter - A Newsletter for devs",
-      description:
-        "Devletter ia a newsletter subscribing single page app made with Nextjs and Tailwindcss.",
-      tags: ["Nextjs", "Tailwindcss"],
-      link: "https://github.com/taqui-786/Devletter",
-    },
-    {
-      title: "CrouMaker - A Crousal Maker App",
-      description:
-        "Crousal Maker is a tool with in-built crousals templates edit and download it in any format.",
-      tags: ["Nextjs", "jsPDF", "html2canvas", "Shadcn Ui"],
-      link: "https://github.com/taqui-786/crousal-maker",
+      title: "Precaumed",
+      description: "Health supplies e-commerce platform",
+      tags: ["PHP", "Mysql", "Online Payment Service"],
     },
   ];
 
   return (
     // PROJECT PAGE
-    <div className="h-full w-full relative flex flex-col items-start gap-5 overflow-hidden">
+    <div className="h-full w-full relative flex flex-col items-start gap-5 overflow-hidden border px-16 py-8 rounded backdrop-blur-sm">
       <Badge className=" gap-2">
         <Layers className="h-5 w-5" />
         Projects
@@ -87,8 +65,7 @@ const projectsPage = () => {
             I love to Build Cool Projects. Here, you&#x27;ll find a curated
             collection of my creative endeavors and technical projects. Each
             piece represents a journey of innovation, problem-solving, and
-            continuous learning. Feel free to explore this showcase of my
-            passion and expertise in action.
+            continuous learning.
           </p>
         </FramerWrapper>
       </div>

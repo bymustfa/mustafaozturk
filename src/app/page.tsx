@@ -17,6 +17,7 @@ export default function Home() {
           <SocialLinks />
         </div>
       </FramerWrapper>
+
       <FramerWrapper
         className="h-full w-[47%] relative block max-lg:hidden"
         y={0}

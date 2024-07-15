@@ -1,14 +1,6 @@
 "use client";
 import { cn } from "@/lib/utils";
-import {
-  Briefcase,
-  Home,
-  Layers,
-  Lightbulb,
-  PackagePlus,
-  Phone,
-  User2,
-} from "lucide-react";
+import { Briefcase, Home, Layers, PackagePlus, User2 } from "lucide-react";
 import { buttonVariants } from "./ui/button";
 
 import {
@@ -26,9 +18,8 @@ const Navbar = () => {
   const items = [
     { name: "Home", icon: <Home />, link: "/" },
     { name: "About", icon: <User2 />, link: "/about" },
-    { name: "Skills", icon: <Lightbulb />, link: "/skills" },
     { name: "Projects", icon: <Layers />, link: "/projects" },
-    { name: "Work", icon: <Briefcase />, link: "/education" },
+    { name: "History", icon: <Briefcase />, link: "/history" },
     { name: "More", icon: <PackagePlus />, link: "/more" },
   ];
 
@@ -58,7 +49,7 @@ const Navbar = () => {
     >
       {items.map((itm) => {
         return (
-          <TooltipProvider key={itm.name}>
+          <TooltipProvider key={itm.name} delayDuration={10}>
             <Tooltip>
               <TooltipTrigger asChild>
                 <Link
