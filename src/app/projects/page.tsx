@@ -35,7 +35,7 @@ const projectsPage = () => {
       title: "Horozoglu Consultants",
       description: "Financial consultancy and management project",
       tags: ["PHP", "Mysql", "Bootstrap", "Laravel"],
-      link: "horozogluconsultants.com",
+      link: "https://horozogluconsultants.com",
     },
 
     {
