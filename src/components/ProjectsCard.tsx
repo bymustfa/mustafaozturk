@@ -9,6 +9,7 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
+
 import FramerWrapper from "./FramerWrapper";
 import { ArrowUpRight } from "lucide-react";
 
@@ -47,31 +48,34 @@ const ProjectCards: React.FC<projectcardprops> = ({ value, num }) => {
 
   return (
     <FramerWrapper
-      className={"max-w-[32%] min-h-[345px] max-lg:max-w-full"}
+      className="max-w-[32%] min-h-[345px] max-lg:max-w-full "
       y={0}
       scale={0.8}
       delay={num / 4}
       duration={0.15}
     >
-      <Card className="w-full h-full">
-        <CardHeader>
-          <CardTitle>{value.title}</CardTitle>
-        </CardHeader>
-        <CardContent>
-          <p className="text-base font-poppins">{value.description}</p>
-          <div className=" w-full h-fit flex mt-2 justify-center flex-row gap-3 flex-wrap">
-            {value.tags.map((itm: string, indx: number) => {
-              return (
-                <span
-                  className={`inline-flex items-center gap-x-1.5 py-1.5 px-3 rounded-full text-xs font-medium ${color(itm)}`}
-                  key={indx}
-                >
-                  {itm}
-                </span>
-              );
-            })}
-          </div>
-        </CardContent>
+      <Card className="w-full h-full flex flex-col justify-between">
+        <div className="flex flex-col gap-2">
+          <CardHeader>
+            <CardTitle>{value.title}</CardTitle>
+          </CardHeader>
+
+          <CardContent>
+            <p className="text-base font-poppins">{value.description}</p>
+            <div className="w-full h-fit flex mt-4 justify-center flex-row gap-3 flex-wrap">
+              {value.tags.map((itm: string, indx: number) => {
+                return (
+                  <span
+                    className={`inline-flex items-center gap-x-1.5 py-1.5 px-3 rounded-full text-xs font-medium ${color(itm)}`}
+                    key={indx}
+                  >
+                    {itm}
+                  </span>
+                );
+              })}
+            </div>
+          </CardContent>
+        </div>
 
         <CardFooter className="items-center justify-center flex">
           {value.link && (
