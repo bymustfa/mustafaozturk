@@ -81,13 +81,15 @@ const morePage = async () => {
               delay={indx / 4}
               duration={0.15}
             >
-              <Card className="w-full">
+              <Card className="w-full h-full  flex flex-col justify-between">
                 <CardHeader>
                   <CardTitle>{value.title}</CardTitle>
                 </CardHeader>
+
                 <CardContent>
                   <p className="text-base font-poppins">{value.description}</p>
                 </CardContent>
+
                 <CardFooter>
                   <Link
                     href={value.link as string}
