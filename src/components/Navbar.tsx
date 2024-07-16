@@ -47,24 +47,24 @@ const Navbar = () => {
       className={`h-fit w-fit fixed bottom-5 right-0 left-0 px-5 z-50 shadow-2xl bg-white m-auto border border-black rounded-full  p-2    flex-row gap-3 transition ease-in-out delay-150  hover:-translate-y-1 hover:scale-100 max-sm:gap-1  flex backdrop-blur-sm`}
       y={-100}
     >
-      {items.map((itm) => {
+      {items.map((item) => {
         return (
-          <TooltipProvider key={itm.name} delayDuration={10}>
+          <TooltipProvider key={item.name} delayDuration={10}>
             <Tooltip>
               <TooltipTrigger asChild>
                 <Link
-                  href={itm.link}
+                  href={item.link}
                   className={cn(
                     buttonVariants({ variant: "ghost", size: "sm" }),
                     "hover:text-[#2f7df4]",
-                    pathname === itm.link && "text-[#2f7df4] bg-zinc-100",
+                    pathname === item.link && "text-[#2f7df4] bg-zinc-100",
                   )}
                 >
-                  {itm.icon}
+                  {item.icon}
                 </Link>
               </TooltipTrigger>
               <TooltipContent>
-                <p>{itm.name}</p>
+                <p>{item.name}</p>
               </TooltipContent>
             </Tooltip>
           </TooltipProvider>

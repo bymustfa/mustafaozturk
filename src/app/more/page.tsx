@@ -71,14 +71,14 @@ const morePage = async () => {
       </div>
 
       <div className="h-auto w-full flex flex-wrap gap-3 p-2">
-        {feed.items.map((value, indx) => {
+        {feed.items.map((value, index) => {
           return (
             <FramerWrapper
-              key={indx}
+              key={index}
               className="max-w-[32%] max-lg:max-w-full"
               y={0}
               scale={0.8}
-              delay={indx / 4}
+              delay={index / 4}
               duration={0.15}
             >
               <Card className="w-full h-full  flex flex-col justify-between">

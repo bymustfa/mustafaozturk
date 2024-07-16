@@ -63,13 +63,13 @@ const ProjectCards: React.FC<projectcardprops> = ({ value, num }) => {
           <CardContent>
             <p className="text-base font-poppins">{value.description}</p>
             <div className="w-full h-fit flex mt-4 justify-center flex-row gap-3 flex-wrap">
-              {value.tags.map((itm: string, indx: number) => {
+              {value.tags.map((item: string, index: number) => {
                 return (
                   <span
-                    className={`inline-flex items-center gap-x-1.5 py-1.5 px-3 rounded-full text-xs font-medium ${color(itm)}`}
-                    key={indx}
+                    className={`inline-flex items-center gap-x-1.5 py-1.5 px-3 rounded-full text-xs font-medium ${color(item)}`}
+                    key={index}
                   >
-                    {itm}
+                    {item}
                   </span>
                 );
               })}

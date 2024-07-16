@@ -71,8 +71,8 @@ const projectsPage = () => {
       </div>
 
       <div className=" w-full flex flex-row flex-wrap gap-3 max-lg:flex-col">
-        {Projects.map((val, indx) => {
-          return <ProjectCards key={indx} value={val} num={indx} />;
+        {Projects.map((val, index) => {
+          return <ProjectCards key={index} value={val} num={index} />;
         })}
       </div>
     </div>

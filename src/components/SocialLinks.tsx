@@ -30,28 +30,28 @@ const SocialLinks = () => {
   ];
   return (
     <>
-      {links.map((itm, indx) => {
-        const timing = 0.55 + indx * 0.125;
+      {links.map((item, index) => {
+        const timing = 0.55 + index * 0.125;
 
         return (
-          <FramerWrapper key={indx} delay={timing} y={50}>
-            <TooltipProvider key={itm.name} delayDuration={10}>
+          <FramerWrapper key={index} delay={timing} y={50}>
+            <TooltipProvider key={item.name} delayDuration={10}>
               <Tooltip>
                 <TooltipTrigger asChild>
                   <Link
                     target="blank"
-                    href={itm.link}
+                    href={item.link}
                     className={cn(
                       buttonVariants({ variant: "outline", size: "icon" }),
                       "backdrop-blur-sm",
                       "hover:shadow-lg",
                     )}
                   >
-                    {itm.icon}
+                    {item.icon}
                   </Link>
                 </TooltipTrigger>
                 <TooltipContent>
-                  <p>{itm.name}</p>
+                  <p>{item.name}</p>
                 </TooltipContent>
               </Tooltip>
             </TooltipProvider>
