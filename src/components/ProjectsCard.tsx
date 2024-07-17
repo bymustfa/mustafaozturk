@@ -1,7 +1,6 @@
 import { cn, IPorjects } from "@/lib/utils";
 import Link from "next/link";
 import { buttonVariants } from "./ui/button";
-import { Badge } from "./ui/badge";
 import {
   Card,
   CardContent,
