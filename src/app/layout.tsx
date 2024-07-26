@@ -26,19 +26,12 @@ export const metadata: Metadata = {
   // added new keywords for seo
   keywords: [
     "portfolio",
-    "mustafa",
     "mustafa öztürk",
     "mustafa öztürk kim",
     "mustafa öztürk portfolio",
-    "öztürk",
-    "öztürk kim",
-    "öztürk portfolio",
     "web developer",
-    "web",
-    "web dev",
-    "developer",
-    "PROGRAMMER ",
-    "programmer ",
+    "software developer",
+    "programmer",
   ],
   authors: [
     {
@@ -67,6 +60,7 @@ export const metadata: Metadata = {
   icons: {
     icon: "/favicon.ico",
   },
+  robots: "index, follow",
 };
 
 export default function RootLayout({
@@ -76,6 +70,11 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+      <head>
+        <meta charSet="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="author" content="Mustafa ÖZTÜRK" />
+      </head>
       <body className={`${poppins.variable} ${rubik.variable}`}>
         <main
           className={cn(
