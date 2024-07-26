@@ -1,6 +1,5 @@
 import { type ClassValue, clsx } from "clsx";
 import { twMerge } from "tailwind-merge";
-import logo from "../../public/images/me.jpg";
 
 export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs));
@@ -8,9 +7,10 @@ export function cn(...inputs: ClassValue[]) {
 
 export const siteConfig = {
   name: "Mustafa ÖZTÜRK",
-  description: "I am a Software Developer",
-  logo: logo,
+  description:
+    "I am a Software Developer specializing in modern web technologies and creating innovative solutions.",
   url: "https://mustafaozturk.kim",
+  logo: "https://mustafaozturk.kim/images/me.jpg",
 };
 
 export interface IPorjects {
