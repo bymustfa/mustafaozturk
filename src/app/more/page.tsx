@@ -54,16 +54,11 @@ const morePage = async () => {
                 </CardHeader>
 
                 <CardContent className="flex items-end justify-center h-full">
-                  <Image
+                  <img
                     src={extractImageFromContent(value["content:encoded"])}
                     alt={value.title as string}
                     width={300}
                     height={100}
-                    // load blur
-                    placeholder="blur"
-                    blurDataURL={extractImageFromContent(
-                      value["content:encoded"],
-                    )}
                   />
                 </CardContent>
 
