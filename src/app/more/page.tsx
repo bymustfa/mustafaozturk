@@ -9,55 +9,22 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import Link from "next/link";
-import { cn } from "@/lib/utils";
+import { cn, extractImageFromContent } from "@/lib/utils";
 import { buttonVariants } from "@/components/ui/button";
 import FramerWrapper from "@/components/FramerWrapper";
 import Parser from "rss-parser";
+import crypto from "crypto";
+import Image from "next/image";
 
 const morePage = async () => {
   // https://medium.com/feed/@bymustfa
-  const parser = new Parser();
+  const parser = new Parser({
+    requestOptions: {
+      secureOptions: crypto.constants.SSL_OP_LEGACY_SERVER_CONNECT,
+    },
+  });
+
   const feed = await parser.parseURL("https://medium.com/feed/@bymustfa");
-
-  const morelink = [
-    {
-      title: "Dev.to",
-      description:
-        "I write blogs on web development, trending tech stacks or javascript guide or tips in Dev.to ",
-      link: "https://dev.to/random_ti",
-    },
-    {
-      title: "Hashnode",
-      description:
-        "I write blogs on web development, trending tech stacks or javascript guide or tips in Hashnode",
-      link: "https://mdtaquiimam.hashnode.dev/",
-    },
-    {
-      title: "Medium",
-      description:
-        "I write blogs on web development, trending tech stacks or javascript guide or tips in Medium",
-      link: "https://medium.com/@mdtaqui.jhar",
-    },
-
-    {
-      title: "Daily.Dev",
-      description:
-        "I am also the member of Daily Dev squads and i also upload post on some squads.",
-      link: "https://app.daily.dev/taqui_786",
-    },
-    {
-      title: "Gumroad",
-      description:
-        "I also sell digital products on gumroad like Notion Templates and web projects etc..",
-      link: "https://mdtaquijhar.gumroad.com/",
-    },
-    {
-      title: "Buy Me a coffee",
-      description:
-        "Your support goes a long way in helping me maintain the quality of content, explore new topics, and dedicate more time to creating valuable projects.",
-      link: "https://www.buymeacoffee.com/taquidevloper",
-    },
-  ];
 
   return (
     // ABOUT PAGE
@@ -86,8 +53,18 @@ const morePage = async () => {
                   <CardTitle>{value.title}</CardTitle>
                 </CardHeader>
 
-                <CardContent>
-                  <p className="text-base font-poppins">{value.description}</p>
+                <CardContent className="flex items-end justify-center h-full">
+                  <Image
+                    src={extractImageFromContent(value["content:encoded"])}
+                    alt={value.title as string}
+                    width={300}
+                    height={100}
+                    // load blur
+                    placeholder="blur"
+                    blurDataURL={extractImageFromContent(
+                      value["content:encoded"],
+                    )}
+                  />
                 </CardContent>
 
                 <CardFooter>

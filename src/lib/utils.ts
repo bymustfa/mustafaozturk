@@ -34,3 +34,9 @@ export interface IEducation {
   description: string;
   years?: string;
 }
+
+export function extractImageFromContent(content: string): string {
+  const regex = /<img[^>]+src="([^">]+)"/g;
+  const match = regex.exec(content) as RegExpExecArray;
+  return match[1];
+}
