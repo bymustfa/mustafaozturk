@@ -15,6 +15,7 @@ function setLang(next: "en" | "tr") {
   } catch {
     /* private mode */
   }
+  document.cookie = `${LANG_KEY}=${next};path=/;max-age=31536000;SameSite=Lax`;
 }
 
 export default function Nav() {

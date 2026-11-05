@@ -33,7 +33,6 @@ export type Project = {
   role?: Copy;
   stack: string[];
   links: ProjectLink[];
-  tiles: { label: string; mark: string; tone: Tone }[];
 };
 
 export const placesAndTools = [
@@ -118,12 +117,6 @@ export const projects: Project[] = [
     },
     stack: ["TypeScript", "MCP", "OAuth", "GitHub"],
     links: [],
-    tiles: [
-      { label: "MCP", mark: "01", tone: "cream" },
-      { label: "OAuth", mark: "02", tone: "blue" },
-      { label: "Tasks", mark: "03", tone: "red" },
-      { label: "ERD", mark: "04", tone: "ink" },
-    ],
   },
   {
     slug: "yanimda-premium",
@@ -162,12 +155,6 @@ export const projects: Project[] = [
         tr: "Canlı siteyi aç",
       },
     ],
-    tiles: [
-      { label: "VF", mark: "TR", tone: "red" },
-      { label: "Next", mark: "JS", tone: "cream" },
-      { label: "TS", mark: "<>", tone: "blue" },
-      { label: "Web", mark: "04", tone: "ink" },
-    ],
   },
   {
     slug: "somra-media",
@@ -205,12 +192,6 @@ export const projects: Project[] = [
         tr: "Depoyu aç",
       },
     ],
-    tiles: [
-      { label: "Go", mark: "GO", tone: "blue" },
-      { label: "Docker", mark: "01", tone: "cream" },
-      { label: "Media", mark: "02", tone: "red" },
-      { label: "AGPL", mark: "03", tone: "ink" },
-    ],
   },
   {
     slug: "popil",
@@ -242,12 +223,6 @@ export const projects: Project[] = [
     },
     stack: ["React Native", "Next.js", "LLM"],
     links: [],
-    tiles: [
-      { label: "RSS", mark: "01", tone: "cream" },
-      { label: "LLM", mark: "02", tone: "red" },
-      { label: "RN", mark: "03", tone: "blue" },
-      { label: "Web", mark: "04", tone: "ink" },
-    ],
   },
   {
     slug: "evde-internet",
@@ -285,12 +260,6 @@ export const projects: Project[] = [
         tr: "Canlı siteyi aç",
       },
     ],
-    tiles: [
-      { label: "VF", mark: "EV", tone: "red" },
-      { label: "Next", mark: "JS", tone: "cream" },
-      { label: "OSS", mark: "03", tone: "blue" },
-      { label: "Web", mark: "04", tone: "ink" },
-    ],
   },
   {
     slug: "workonlog",
@@ -321,12 +290,6 @@ export const projects: Project[] = [
     },
     stack: ["Next.js", "LLM"],
     links: [],
-    tiles: [
-      { label: "PDF", mark: "01", tone: "cream" },
-      { label: "JSON", mark: "02", tone: "blue" },
-      { label: "LLM", mark: "03", tone: "red" },
-      { label: "Next", mark: "04", tone: "ink" },
-    ],
   },
   {
     slug: "mustiflix",
@@ -357,12 +320,6 @@ export const projects: Project[] = [
     },
     stack: ["HLS", "Android TV", "CMS"],
     links: [],
-    tiles: [
-      { label: "HLS", mark: "01", tone: "red" },
-      { label: "TV", mark: "02", tone: "cream" },
-      { label: "CMS", mark: "03", tone: "blue" },
-      { label: "Web", mark: "04", tone: "ink" },
-    ],
   },
   {
     slug: "sap-basis",
@@ -393,12 +350,6 @@ export const projects: Project[] = [
     },
     stack: ["SaaS", "RFC", "SAP"],
     links: [],
-    tiles: [
-      { label: "SAP", mark: "01", tone: "blue" },
-      { label: "RFC", mark: "02", tone: "cream" },
-      { label: "SaaS", mark: "03", tone: "red" },
-      { label: "BTP", mark: "04", tone: "ink" },
-    ],
   },
   {
     slug: "querra-ide",
@@ -420,20 +371,20 @@ export const projects: Project[] = [
     body: {
       en: [
         "Querra IDE is a native client for people who keep more than one database open. The aim is one interface instead of a different tool per engine.",
-        "It is in progress, and there is no public repository to link yet.",
+        "The product is on the web at querra.dev. Development is still in progress.",
       ],
       tr: [
         "Querra IDE, birden fazla veritabanını açık tutanlar için native bir istemci. Hedef, her motor için ayrı araç yerine tek arayüz.",
-        "Geliştirme sürüyor ve bağlanacak açık bir depo henüz yok.",
+        "Ürün querra.dev adresinde. Geliştirme hâlâ sürüyor.",
       ],
     },
     stack: ["Native", "Databases"],
-    links: [],
-    tiles: [
-      { label: "SQL", mark: "01", tone: "cream" },
-      { label: "IDE", mark: "02", tone: "blue" },
-      { label: "DB", mark: "03", tone: "red" },
-      { label: "WIP", mark: "04", tone: "ink" },
+    links: [
+      {
+        href: "https://querra.dev",
+        en: "Visit querra.dev",
+        tr: "querra.dev sitesini aç",
+      },
     ],
   },
   {
@@ -464,12 +415,6 @@ export const projects: Project[] = [
     },
     stack: ["TypeScript", "SaaS"],
     links: [],
-    tiles: [
-      { label: "OHS", mark: "01", tone: "cream" },
-      { label: "OSGB", mark: "02", tone: "red" },
-      { label: "SaaS", mark: "03", tone: "blue" },
-      { label: "TR", mark: "04", tone: "ink" },
-    ],
   },
   {
     slug: "mysql-mcp",
@@ -503,12 +448,6 @@ export const projects: Project[] = [
         en: "View the repository",
         tr: "Depoyu aç",
       },
-    ],
-    tiles: [
-      { label: "SQL", mark: "01", tone: "blue" },
-      { label: "MCP", mark: "02", tone: "cream" },
-      { label: "TS", mark: "03", tone: "red" },
-      { label: "OSS", mark: "04", tone: "ink" },
     ],
   },
   {
@@ -549,12 +488,6 @@ export const projects: Project[] = [
         tr: "npm'de aç",
       },
     ],
-    tiles: [
-      { label: "HEX", mark: "#", tone: "red" },
-      { label: "TS", mark: "01", tone: "cream" },
-      { label: "npm", mark: "02", tone: "blue" },
-      { label: "OSS", mark: "03", tone: "ink" },
-    ],
   },
   {
     slug: "claude-limit",
@@ -588,12 +521,6 @@ export const projects: Project[] = [
         en: "View the repository",
         tr: "Depoyu aç",
       },
-    ],
-    tiles: [
-      { label: "macOS", mark: "01", tone: "cream" },
-      { label: "Swift", mark: "02", tone: "blue" },
-      { label: "Menu", mark: "03", tone: "red" },
-      { label: "OSS", mark: "04", tone: "ink" },
     ],
   },
   {
@@ -629,12 +556,6 @@ export const projects: Project[] = [
         tr: "Depoyu aç",
       },
     ],
-    tiles: [
-      { label: "Diff", mark: "01", tone: "red" },
-      { label: "VSX", mark: "02", tone: "cream" },
-      { label: "TS", mark: "03", tone: "blue" },
-      { label: "Pin", mark: "04", tone: "ink" },
-    ],
   },
   {
     slug: "mcp-audprobe",
@@ -669,12 +590,6 @@ export const projects: Project[] = [
         tr: "Depoyu aç",
       },
     ],
-    tiles: [
-      { label: "OAuth", mark: "01", tone: "blue" },
-      { label: "CLI", mark: "02", tone: "cream" },
-      { label: "CI", mark: "03", tone: "red" },
-      { label: "PY", mark: "04", tone: "ink" },
-    ],
   },
   {
     slug: "ndk-danismanlik",
@@ -707,12 +622,6 @@ export const projects: Project[] = [
         en: "Open the site",
         tr: "Siteyi aç",
       },
-    ],
-    tiles: [
-      { label: "Next", mark: "01", tone: "cream" },
-      { label: "API", mark: "02", tone: "blue" },
-      { label: "Mongo", mark: "03", tone: "red" },
-      { label: "NDK", mark: "04", tone: "ink" },
     ],
   },
   {
@@ -747,12 +656,6 @@ export const projects: Project[] = [
         tr: "Siteyi aç",
       },
     ],
-    tiles: [
-      { label: "PHP", mark: "01", tone: "blue" },
-      { label: "Laravel", mark: "02", tone: "red" },
-      { label: "MySQL", mark: "03", tone: "cream" },
-      { label: "Web", mark: "04", tone: "ink" },
-    ],
   },
   {
     slug: "byk",
@@ -780,12 +683,6 @@ export const projects: Project[] = [
     },
     stack: ["PHP", "Next.js", "TypeScript", "MongoDB", "Tailwind CSS"],
     links: [],
-    tiles: [
-      { label: "Shop", mark: "01", tone: "cream" },
-      { label: "Next", mark: "02", tone: "blue" },
-      { label: "PHP", mark: "03", tone: "red" },
-      { label: "BYK", mark: "04", tone: "ink" },
-    ],
   },
   {
     slug: "precaumed",
@@ -813,12 +710,6 @@ export const projects: Project[] = [
     },
     stack: ["PHP", "MySQL"],
     links: [],
-    tiles: [
-      { label: "PHP", mark: "01", tone: "red" },
-      { label: "MySQL", mark: "02", tone: "cream" },
-      { label: "Pay", mark: "03", tone: "blue" },
-      { label: "Shop", mark: "04", tone: "ink" },
-    ],
   },
 ];
 

@@ -2,16 +2,9 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { T } from "@/components/site/LangText";
-import { getNextProject, getProject, projects, Tone } from "@/lib/content";
+import { getNextProject, getProject, projects } from "@/lib/content";
 
 type Params = { slug: string };
-
-const wash: Record<Tone, string> = {
-  cream: "bg-cream text-black",
-  blue: "bg-accent-blue text-black",
-  red: "bg-accent-red text-cream",
-  ink: "bg-[#141414] text-cream",
-};
 
 export const dynamicParams = false;
 
@@ -19,8 +12,13 @@ export function generateStaticParams() {
   return projects.map((project) => ({ slug: project.slug }));
 }
 
-export function generateMetadata({ params }: { params: Params }): Metadata {
-  const project = getProject(params.slug);
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<Params>;
+}): Promise<Metadata> {
+  const { slug } = await params;
+  const project = getProject(slug);
   if (!project) return { title: "Work" };
   return {
     title: project.title,
@@ -28,24 +26,22 @@ export function generateMetadata({ params }: { params: Params }): Metadata {
   };
 }
 
-export default function CasePage({ params }: { params: Params }) {
-  const project = getProject(params.slug);
+export default async function CasePage({ params }: { params: Promise<Params> }) {
+  const { slug } = await params;
+  const project = getProject(slug);
   if (!project) notFound();
   const next = getNextProject(project.slug);
-  const tone = project.tiles[0]?.tone ?? "ink";
 
   return (
     <article className="pb-28">
-      <header className={`relative min-h-[68vh] ${wash[tone]}`}>
-        <div className="flex min-h-[68vh] flex-col justify-end px-[clamp(18px,4vw,48px)] pb-10 pt-32">
-          <p className="text-xs font-semibold uppercase tracking-[0.14em] opacity-70">
-            <T en={project.context.en} tr={project.context.tr} />
-            {project.year ? ` · ${project.year}` : ""}
-          </p>
-          <h1 className="mt-3 max-w-[14ch] font-stamp text-[clamp(52px,9vw,120px)] uppercase leading-[0.88] tracking-tight">
-            {project.title}
-          </h1>
-        </div>
+      <header className="px-[clamp(18px,4vw,48px)] pb-8 pt-32">
+        <p className="text-xs font-semibold uppercase tracking-[0.14em] text-accent-blue">
+          <T en={project.context.en} tr={project.context.tr} />
+          {project.year ? ` · ${project.year}` : ""}
+        </p>
+        <h1 className="mt-3 max-w-[14ch] font-stamp text-[clamp(52px,9vw,120px)] uppercase leading-[0.88] tracking-tight text-cream">
+          {project.title}
+        </h1>
       </header>
 
       <div className="grid gap-10 px-[clamp(18px,4vw,48px)] py-14 lg:grid-cols-[140px_1fr]">

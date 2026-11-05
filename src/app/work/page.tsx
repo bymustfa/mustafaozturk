@@ -27,30 +27,53 @@ export default function WorkPage() {
         </p>
       </header>
       <ol className="mt-14 divide-y divide-cream/15 border-y border-cream/15">
-        {projects.map((project, index) => (
-          <li key={project.slug}>
-            <Link
-              href={`/work/${project.slug}`}
-              className="group grid gap-3 py-6 md:grid-cols-[72px_1fr_auto] md:items-baseline md:gap-8"
+        {projects.map((project, index) => {
+          const siteLink = project.links.find((link) => !link.href.includes("github.com"));
+          const siteHost = siteLink
+            ? new URL(siteLink.href).host.replace(/^www\./, "")
+            : null;
+
+          return (
+            <li
+              key={project.slug}
+              className="grid gap-3 py-6 md:grid-cols-[72px_1fr_auto] md:items-baseline md:gap-8"
             >
               <span className="font-stamp text-2xl text-foreground/40">
                 {String(index + 1).padStart(2, "0")}
               </span>
-              <span>
-                <span className="block text-[clamp(28px,4vw,44px)] font-black leading-none tracking-tight transition-colors group-hover:text-accent-red">
+              <div>
+                <Link
+                  href={`/work/${project.slug}`}
+                  className="block text-[clamp(28px,4vw,44px)] font-black leading-none tracking-tight transition-colors hover:text-accent-red"
+                >
                   {project.title}
-                </span>
-                <span className="mt-2 block text-sm uppercase tracking-[0.08em] text-foreground/50">
+                </Link>
+                <p className="mt-2 text-sm uppercase tracking-[0.08em] text-foreground/50">
                   {project.year ? `${project.year} · ` : ""}
                   <T en={project.context.en} tr={project.context.tr} />
-                </span>
-              </span>
-              <span className="text-xs font-semibold uppercase tracking-[0.08em] text-cream/70 group-hover:text-accent-blue">
-                <T en="See case ↗" tr="Dosya ↗" />
-              </span>
-            </Link>
-          </li>
-        ))}
+                </p>
+              </div>
+              <div className="flex flex-wrap items-center gap-x-5 gap-y-2 text-xs font-semibold uppercase tracking-[0.08em]">
+                {siteLink && siteHost ? (
+                  <a
+                    href={siteLink.href}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="text-accent-blue hover:text-cream"
+                  >
+                    {siteHost} ↗
+                  </a>
+                ) : null}
+                <Link
+                  href={`/work/${project.slug}`}
+                  className="text-cream/70 hover:text-accent-blue"
+                >
+                  <T en="See case ↗" tr="Dosya ↗" />
+                </Link>
+              </div>
+            </li>
+          );
+        })}
       </ol>
     </article>
   );
