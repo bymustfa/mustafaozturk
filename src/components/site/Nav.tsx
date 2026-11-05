@@ -59,10 +59,10 @@ export default function Nav() {
           <img
             src="/owl-mark.gif"
             srcSet="/owl-mark.gif 1x, /owl-mark@2x.gif 2x"
-            width={40}
-            height={40}
+            width={56}
+            height={56}
             alt="Mustafa Öztürk, home"
-            className="block h-[clamp(28px,4vw,40px)] w-[clamp(28px,4vw,40px)]"
+            className="block h-14 w-14"
           />
         </Link>
         <div className="pointer-events-none absolute left-1/2 top-[clamp(16px,2.2vw,30px)] -translate-x-1/2">
