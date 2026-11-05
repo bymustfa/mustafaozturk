@@ -81,7 +81,7 @@ export const stackGroups: { label: Copy; items: string[] }[] = [
     ],
   },
   {
-    label: { en: "AI", tr: "Yapay zekâ" },
+    label: { en: "AI engineering", tr: "Yapay zekâ mühendisliği" },
     items: ["MCP servers", "LLM features", "Document AI"],
   },
 ];
@@ -594,6 +594,11 @@ export const projects: Project[] = [
         en: "View the repository",
         tr: "Depoyu aç",
       },
+      {
+        href: "https://pypi.org/project/mcp-audprobe/",
+        en: "View on PyPI",
+        tr: "PyPI'de aç",
+      },
     ],
   },
   {
@@ -749,8 +754,8 @@ export const experience: Experience[] = [
     location: "İstanbul",
     href: "https://www.vodafone.com.tr/",
     summary: {
-      en: "I update legacy frontends with React and Next.js, including WebView work. Yanımda Premium and Evde İnternet are part of this.",
-      tr: "Eski ön yüzleri React ve Next.js ile güncelliyorum; WebView işi de bunun içinde. Yanımda Premium ve Evde İnternet bu dönemin parçası.",
+      en: "Old frontends, moved to React and Next.js. WebView too. Yanımda Premium and Evde İnternet are in this.",
+      tr: "Eski ön yüzler, React ve Next.js. WebView de var. Yanımda Premium ve Evde İnternet bu iş.",
     },
   },
   {
@@ -760,8 +765,8 @@ export const experience: Experience[] = [
     location: "İstanbul",
     href: "https://www.smartiks.com.tr/",
     summary: {
-      en: "I worked on delivery for Koç Holding projects. I built a form builder and a datatable generator so screens could ship faster, and Express tools that generated API endpoints.",
-      tr: "Koç Holding projelerinin teslimatında çalıştım. Ekranları hızlandırmak için bir form builder ve datatable üretici yazdım; API uçlarını üreten Express araçları da buradan.",
+      en: "Delivery on Koç Holding projects. A form builder, a datatable generator, and Express tools that spit out API endpoints.",
+      tr: "Koç Holding işlerinin teslimatı. Form builder, datatable üretici, API ucu çıkaran Express araçları.",
     },
   },
   {
@@ -771,8 +776,8 @@ export const experience: Experience[] = [
     location: "İstanbul",
     href: "https://gokkusagiyazilim.com.tr/",
     summary: {
-      en: "Web, mobile, ERP, and CRM work. I finished project frontends with React and Node.js.",
-      tr: "Web, mobil, ERP ve CRM işleri. Proje ön yüzlerini React ve Node.js ile tamamladım.",
+      en: "Web, mobile, ERP, CRM. I finished the frontends in React and Node.js.",
+      tr: "Web, mobil, ERP, CRM. Ön yüzleri React ve Node.js ile bitirdim.",
     },
   },
   {
@@ -782,8 +787,8 @@ export const experience: Experience[] = [
     location: "İstanbul",
     href: "https://litesoft.com.tr/",
     summary: {
-      en: "Software support across many companies: web and mobile with React, ASP.NET, and PHP, including ERP and CRM.",
-      tr: "Birçok şirkete yazılım desteği: web ve mobilde React, ASP.NET ve PHP. ERP ve CRM de bu işlerin içindeydi.",
+      en: "Software support for a lot of companies. Web and mobile: React, ASP.NET, PHP. ERP and CRM too.",
+      tr: "Birçok şirkete yazılım desteği. Web ve mobil: React, ASP.NET, PHP. ERP ve CRM de var.",
     },
   },
   {
@@ -836,8 +841,8 @@ export const education: { years: string; title: Copy; summary?: Copy }[] = [
     years: "2016 — 2018",
     title: { en: "Kastamonu University", tr: "Kastamonu Üniversitesi" },
     summary: {
-      en: "C#, SQL, and PHP, plus game development and mobile development outside the core courses.",
-      tr: "C#, SQL ve PHP. Bölüm dışı oyun geliştirme ve mobil geliştirme çalışmaları da bu döneme ait.",
+      en: "C#, SQL, and PHP. Game and mobile work outside class.",
+      tr: "C#, SQL, PHP. Ders dışında oyun ve mobil.",
     },
   },
   {
