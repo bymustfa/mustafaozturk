@@ -2,16 +2,23 @@
 
 const nextConfig = {
   experimental: {
-    serverComponentsExternalPackages: ["@react-email/render"],
+    serverComponentsExternalPackages: ["@react-email/render", "rss-parser"],
   },
-
-
-  remotePatterns: [
+  images: {
+    remotePatterns: [
       {
-        protocol: 'https',
-        hostname: 'cdn-images-1.medium.com',
+        protocol: "https",
+        hostname: "cdn-images-1.medium.com",
       },
     ],
+  },
+  async redirects() {
+    return [
+      { source: "/projects", destination: "/work", permanent: true },
+      { source: "/history", destination: "/about", permanent: true },
+      { source: "/more", destination: "/writing", permanent: true },
+    ];
+  },
 };
 
 module.exports = nextConfig;
