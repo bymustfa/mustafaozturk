@@ -1,0 +1,4 @@
+# pnpm 12 ignores minimum-release-age in .npmrc and blocks any locked
+# package published inside its default cutoff. Coolify installs the lockfile
+# as committed, so that gate must stay off for this site.
+minimumReleaseAge: 0
