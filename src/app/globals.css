@@ -84,30 +84,35 @@ html[data-lang="tr"] .lang-en {
   color: var(--accent-blue);
 }
 
-.glyph-a,
-.glyph-b {
-  animation: glyph-swap 6.4s ease-in-out infinite;
+.viewport-fade {
+  position: fixed;
+  inset-inline: 0;
+  bottom: 0;
+  z-index: 40;
+  height: clamp(92px, 16vh, 140px);
+  pointer-events: none;
 }
 
-.glyph-b {
-  animation-delay: -3.2s;
+.viewport-fade__blur,
+.viewport-fade__tint {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
 }
 
-@keyframes glyph-swap {
-  0%,
-  40% {
-    opacity: 1;
-    transform: translateY(0) scale(1);
-  }
-  50%,
-  90% {
-    opacity: 0;
-    transform: translateY(8px) scale(0.92);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0) scale(1);
-  }
+.viewport-fade__blur {
+  -webkit-backdrop-filter: blur(var(--fade-blur));
+  backdrop-filter: blur(var(--fade-blur));
+}
+
+.viewport-fade__tint {
+  background: linear-gradient(
+    to bottom,
+    transparent 0%,
+    transparent 34%,
+    rgb(10 10 10 / 22%) 68%,
+    rgb(10 10 10 / 78%) 100%
+  );
 }
 
 .scroll-hint {
@@ -131,14 +136,8 @@ html[data-lang="tr"] .lang-en {
     scroll-behavior: auto;
   }
 
-  .glyph-a,
-  .glyph-b,
   .scroll-hint,
   .hero-word {
     animation: none !important;
-  }
-
-  .glyph-b {
-    display: none;
   }
 }

@@ -1,11 +1,26 @@
 import Link from "next/link";
-import { getFeatured } from "@/lib/content";
+import { connection } from "next/server";
+import { getFeatured, type Project } from "@/lib/content";
 import { Marquee } from "./Marquee";
 import ProjectShowcase from "./ProjectShowcase";
 import { T } from "./LangText";
 
-export default function Featured() {
-  const featured = getFeatured();
+function shuffleProjects(projects: readonly Project[]) {
+  const next = projects.slice();
+  for (let i = next.length - 1; i > 0; i -= 1) {
+    const j = Math.floor(Math.random() * (i + 1));
+    const current = next[i];
+    next[i] = next[j];
+    next[j] = current;
+  }
+  return next;
+}
+
+export default async function Featured() {
+  // Per request, after the featured set is chosen. connection() keeps the
+  // shuffle out of any static prerender, so server HTML matches hydration.
+  await connection();
+  const featured = shuffleProjects(getFeatured());
 
   return (
     <div className="relative z-10 md:-mt-[18vh]">

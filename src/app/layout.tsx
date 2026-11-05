@@ -5,6 +5,7 @@ import { Anton, Archivo, Libre_Baskerville } from "next/font/google";
 import "./globals.css";
 import Nav from "@/components/site/Nav";
 import SmoothScroll from "@/components/site/SmoothScroll";
+import ViewportFade from "@/components/site/ViewportFade";
 import { T } from "@/components/site/LangText";
 import { site } from "@/lib/content";
 
@@ -106,6 +107,7 @@ export default async function RootLayout({ children }: { children: ReactNode }) 
           <T en="Skip to content" tr="İçeriğe geç" />
         </a>
         <Nav />
+        <ViewportFade />
         <main id="content" className="flex-1">
           {children}
         </main>
