@@ -6,7 +6,7 @@ import { projects } from "@/lib/content";
 export const metadata: Metadata = {
   title: "Work",
   description:
-    "Products, Vodafone frontends, and open source by Mustafa Öztürk.",
+    "My products, frontend work at Vodafone, and open source under bymustfa.",
 };
 
 export default function WorkPage() {
@@ -21,8 +21,8 @@ export default function WorkPage() {
         </h1>
         <p className="mt-6 max-w-xl text-lg leading-relaxed text-foreground/80">
           <T
-            en="Products I build, frontend work at Vodafone Türkiye, and open source under bymustfa. No invented clients."
-            tr="Üzerinde çalıştığım ürünler, Vodafone Türkiye'deki ön yüz işi ve bymustfa altındaki açık kaynak. Uydurma müşteri yok."
+            en="My products, frontend work at Vodafone, and open source under bymustfa."
+            tr="Kendi ürünlerim, Vodafone'daki ön yüz işi, bymustfa altındaki açık kaynak."
           />
         </p>
       </header>

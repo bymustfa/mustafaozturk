@@ -88,8 +88,8 @@ export default async function CasePage({ params }: { params: Promise<Params> }) 
           ) : (
             <p className="mt-8 text-sm text-foreground/55">
               <T
-                en="No public URL for this one."
-                tr="Bunun açık bir adresi yok."
+                en="No public URL."
+                tr="Açık adres yok."
               />
             </p>
           )}
