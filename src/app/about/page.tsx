@@ -28,8 +28,8 @@ export default function AboutPage() {
           </h1>
           <p className="mt-6 max-w-xl text-lg leading-relaxed text-foreground/85">
             <T
-              en="I build production software — telco frontends at Vodafone Türkiye, and products around agents, documents, and media with the teams I work in. If it's repetitive, an agent should do it."
-              tr="Üretim yazılımı kuruyorum — Vodafone Türkiye'de telekom ön yüzleri, çalıştığım ekiplerle ajan, doküman ve medya ürünleri. Tekrar ediyorsa bir ajan yapmalı."
+              en="I write full-stack software in Istanbul. Frontend at Vodafone, and products for agents, documents, and media with the teams I work in. If it repeats, an agent should do it."
+              tr="İstanbul'da full-stack yazıyorum. Vodafone'da ön yüz; çalıştığım ekiplerle ajan, doküman ve medya ürünleri. Tekrar ediyorsa ajan yapsın."
             />
           </p>
         </div>
@@ -52,14 +52,14 @@ export default function AboutPage() {
         <ul className="mt-6 max-w-3xl space-y-3 text-lg leading-relaxed text-foreground/85">
           <li>
             <T
-              en="Full-stack at Vodafone Türkiye — Yanımda Premium, Evde İnternet, and the frontends around them."
-              tr="Vodafone Türkiye'de full-stack — Yanımda Premium, Evde İnternet ve etraflarındaki ön yüzler."
+              en="At Vodafone Türkiye. Yanımda Premium, Evde İnternet, and the frontends next to them."
+              tr="Vodafone Türkiye'deyim. Yanımda Premium, Evde İnternet ve yanlarındaki ön yüzler."
             />
           </li>
           <li>
             <T
-              en="Building DevAtlas, Popil, and Somra Media. Shipping LLM features and MCP servers inside real products."
-              tr="DevAtlas, Popil ve Somra Media üzerinde çalışıyorum. Gerçek ürünlerin içinde LLM özellikleri ve MCP sunucuları çıkarıyorum."
+              en="DevAtlas, Popil, Somra Media. LLM features and MCP servers live in the products."
+              tr="DevAtlas, Popil, Somra Media. İçlerinde LLM ve MCP var."
             />
           </li>
           <li>
@@ -125,7 +125,7 @@ export default function AboutPage() {
           id="journey"
           className="font-stamp text-[clamp(36px,6vw,72px)] uppercase leading-none"
         >
-          <T en="Journey" tr="Yol" />
+          <T en="Work history" tr="İş geçmişi" />
         </h2>
         <ol className="mt-8 divide-y divide-cream/15 border-y border-cream/15">
           {experience.map((item) => (
