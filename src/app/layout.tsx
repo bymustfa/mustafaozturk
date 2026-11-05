@@ -1,10 +1,14 @@
 import type { Metadata } from "next";
 import type { ReactNode } from "react";
+import { headers } from "next/headers";
 import { Anton, Archivo, Libre_Baskerville } from "next/font/google";
 import "./globals.css";
 import Nav from "@/components/site/Nav";
+import SmoothScroll from "@/components/site/SmoothScroll";
 import { T } from "@/components/site/LangText";
 import { site } from "@/lib/content";
+
+const languageScript = `(function(){var lang=document.documentElement.getAttribute("data-lang")==="tr"?"tr":"en";try{var stored=localStorage.getItem("mo-lang");if(stored==="tr"||stored==="en"){lang=stored;}else{var nav=((navigator.languages&&navigator.languages[0])||navigator.language||"").toLowerCase();lang=nav.indexOf("tr")===0?"tr":"en";localStorage.setItem("mo-lang",lang);}document.cookie="mo-lang="+lang+";path=/;max-age=31536000;SameSite=Lax";}catch(e){}document.documentElement.dataset.lang=lang;document.documentElement.lang=lang==="tr"?"tr":"en";})();`;
 
 const sans = Archivo({
   subsets: ["latin", "latin-ext"],
@@ -78,20 +82,22 @@ const personJsonLd = {
   sameAs: [site.links.github, site.links.linkedin, site.links.x, site.links.medium],
 };
 
-export default function RootLayout({ children }: { children: ReactNode }) {
+export default async function RootLayout({ children }: { children: ReactNode }) {
+  const headerList = await headers();
+  const lang = headerList.get("x-mo-lang") === "tr" ? "tr" : "en";
+
   return (
     <html
-      lang="en"
-      data-lang="en"
+      lang={lang}
+      data-lang={lang}
       suppressHydrationWarning
       className={`${sans.variable} ${stamp.variable} ${serif.variable} h-full antialiased`}
     >
+      <head>
+        <script dangerouslySetInnerHTML={{ __html: languageScript }} />
+      </head>
       <body className="flex min-h-full flex-col bg-background font-sans text-foreground">
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `(function(){try{var l=localStorage.getItem("mo-lang");if(l==="tr"){document.documentElement.dataset.lang="tr";document.documentElement.lang="tr";}else{document.documentElement.dataset.lang="en";document.documentElement.lang="en";}}catch(e){}})();`,
-          }}
-        />
+        <SmoothScroll />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(personJsonLd) }}

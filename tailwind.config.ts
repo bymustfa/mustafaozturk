@@ -84,10 +84,9 @@ module.exports = {
       animation: {
         marquee: "marquee 36s linear infinite",
         "marquee-slow": "marquee 56s linear infinite",
-        tiles: "marquee 42s linear infinite",
         "hero-in": "hero-in 0.8s cubic-bezier(0.22, 1, 0.36, 1) both",
       },
     },
   },
-  plugins: [require("tailwindcss-animate")],
+  plugins: [],
 };
