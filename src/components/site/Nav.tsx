@@ -4,7 +4,6 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect } from "react";
 import { cn } from "@/lib/utils";
-import OwlMark from "./OwlMark";
 
 const LANG_KEY = "mo-lang";
 
@@ -53,9 +52,18 @@ export default function Nav() {
         <Link
           href="/"
           aria-label="Mustafa Öztürk, home"
-          className="pointer-events-auto -ml-0.5 -mt-1 text-accent-blue"
+          className="pointer-events-auto -ml-0.5 mt-0.5"
         >
-          <OwlMark className="block h-[clamp(48px,6vw,64px)] w-[clamp(48px,6vw,64px)]" />
+          {/* Plain img so the GIF keeps looping. next/image would flatten it. */}
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src="/owl-mark.gif"
+            srcSet="/owl-mark.gif 1x, /owl-mark@2x.gif 2x"
+            width={40}
+            height={40}
+            alt="Mustafa Öztürk, home"
+            className="block h-[clamp(28px,4vw,40px)] w-[clamp(28px,4vw,40px)]"
+          />
         </Link>
         <div className="pointer-events-none absolute left-1/2 top-[clamp(16px,2.2vw,30px)] -translate-x-1/2">
           <div className="pointer-events-auto flex items-center font-sans text-[clamp(11px,1.5vw,13px)] font-bold uppercase tracking-[0.08em] text-cream">

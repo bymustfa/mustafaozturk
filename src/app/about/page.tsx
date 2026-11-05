@@ -12,7 +12,7 @@ import {
 export const metadata: Metadata = {
   title: "About",
   description:
-    "Mustafa Öztürk is a full-stack developer and AI engineer in Istanbul. Currently at Vodafone Türkiye.",
+    "AI engineer in Istanbul. Agents, MCP, tooling. Frontend at Vodafone Türkiye.",
 };
 
 export default function AboutPage() {
@@ -23,13 +23,13 @@ export default function AboutPage() {
           <p className="text-xs font-semibold uppercase tracking-[0.14em] text-accent-blue">
             <T en="About" tr="Hakkımda" />
           </p>
-          <h1 className="mt-3 max-w-[12ch] font-stamp text-[clamp(56px,9vw,120px)] uppercase leading-[0.9] tracking-tight">
-            <T en="Full-stack from Istanbul." tr="İstanbul'dan full-stack." />
+          <h1 className="mt-3 max-w-[14ch] font-stamp text-[clamp(56px,9vw,120px)] uppercase leading-[0.9] tracking-tight">
+            <T en="AI engineer." tr="Yapay zekâ mühendisi." />
           </h1>
           <p className="mt-6 max-w-xl text-lg leading-relaxed text-foreground/85">
             <T
-              en="I write full-stack software in Istanbul. Frontend at Vodafone, and products for agents, documents, and media with the teams I work in. If it repeats, an agent should do it."
-              tr="İstanbul'da full-stack yazıyorum. Vodafone'da ön yüz; çalıştığım ekiplerle ajan, doküman ve medya ürünleri. Tekrar ediyorsa ajan yapsın."
+              en="Istanbul. I build agents, MCP, and tooling. Full-stack too: frontend at Vodafone Türkiye, plus DevAtlas, Popil, and Somra."
+              tr="İstanbul. Ajan, MCP ve araç yazıyorum. Full-stack de var: Vodafone Türkiye'de ön yüz, bir de DevAtlas, Popil, Somra."
             />
           </p>
         </div>
@@ -47,19 +47,19 @@ export default function AboutPage() {
 
       <section className="mt-20" aria-labelledby="now">
         <h2 id="now" className="font-stamp text-[clamp(36px,6vw,72px)] uppercase leading-none">
-          <T en="Now" tr="Şimdi" />
+          <T en="Now" tr="Şu an" />
         </h2>
         <ul className="mt-6 max-w-3xl space-y-3 text-lg leading-relaxed text-foreground/85">
           <li>
             <T
-              en="At Vodafone Türkiye. Yanımda Premium, Evde İnternet, and the frontends next to them."
-              tr="Vodafone Türkiye'deyim. Yanımda Premium, Evde İnternet ve yanlarındaki ön yüzler."
+              en="Vodafone Türkiye. Frontend: Yanımda Premium, Evde İnternet, and the screens next to them."
+              tr="Vodafone Türkiye. Ön yüz: Yanımda Premium, Evde İnternet ve yanlarındaki ekranlar."
             />
           </li>
           <li>
             <T
-              en="DevAtlas, Popil, Somra Media. LLM features and MCP servers live in the products."
-              tr="DevAtlas, Popil, Somra Media. İçlerinde LLM ve MCP var."
+              en="AI work: DevAtlas, Popil, Somra Media. Agents, MCP, LLM tooling."
+              tr="Yapay zekâ işi: DevAtlas, Popil, Somra Media. Ajan, MCP, LLM araçları."
             />
           </li>
           <li>
@@ -97,7 +97,7 @@ export default function AboutPage() {
 
       <section className="mt-20" aria-labelledby="stack">
         <h2 id="stack" className="font-stamp text-[clamp(36px,6vw,72px)] uppercase leading-none">
-          <T en="Stack" tr="Yığın" />
+          <T en="Stack" tr="Stack" />
         </h2>
         <div className="mt-8 grid gap-8 md:grid-cols-2">
           {stackGroups.map((group) => (
@@ -120,12 +120,12 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <section className="mt-20" aria-labelledby="journey">
+      <section className="mt-20" aria-labelledby="jobs">
         <h2
-          id="journey"
+          id="jobs"
           className="font-stamp text-[clamp(36px,6vw,72px)] uppercase leading-none"
         >
-          <T en="Work history" tr="İş geçmişi" />
+          <T en="Jobs" tr="İşler" />
         </h2>
         <ol className="mt-8 divide-y divide-cream/15 border-y border-cream/15">
           {experience.map((item) => (
@@ -166,7 +166,7 @@ export default function AboutPage() {
 
       <section className="mt-20" aria-labelledby="study">
         <h2 id="study" className="font-stamp text-[clamp(36px,6vw,72px)] uppercase leading-none">
-          <T en="Study" tr="Öğrenim" />
+          <T en="Education" tr="Eğitim" />
         </h2>
         <ol className="mt-8 divide-y divide-cream/15 border-y border-cream/15">
           {education.map((item) => (
