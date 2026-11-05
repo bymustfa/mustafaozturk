@@ -1,3 +1,5 @@
+import OwlMark from "@/components/site/OwlMark";
+
 export function OgCard() {
   return (
     <div
@@ -13,7 +15,9 @@ export function OgCard() {
       }}
     >
       <div style={{ display: "flex", justifyContent: "space-between", fontSize: 28 }}>
-        <span style={{ color: "#3aa1d8" }}>mö</span>
+        <span style={{ color: "#3aa1d8", display: "flex" }}>
+          <OwlMark size={64} />
+        </span>
         <span>mustafaozturk.kim</span>
       </div>
       <div

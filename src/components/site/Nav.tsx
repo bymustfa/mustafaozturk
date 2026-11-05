@@ -4,6 +4,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect } from "react";
 import { cn } from "@/lib/utils";
+import OwlMark from "./OwlMark";
 
 const LANG_KEY = "mo-lang";
 
@@ -52,9 +53,9 @@ export default function Nav() {
         <Link
           href="/"
           aria-label="Mustafa Öztürk, home"
-          className="pointer-events-auto font-stamp text-[clamp(28px,4vw,40px)] leading-none tracking-tight text-accent-blue"
+          className="pointer-events-auto -ml-0.5 -mt-1 text-accent-blue"
         >
-          mö
+          <OwlMark className="block h-[clamp(48px,6vw,64px)] w-[clamp(48px,6vw,64px)]" />
         </Link>
         <div className="pointer-events-none absolute left-1/2 top-[clamp(16px,2.2vw,30px)] -translate-x-1/2">
           <div className="pointer-events-auto flex items-center font-sans text-[clamp(11px,1.5vw,13px)] font-bold uppercase tracking-[0.08em] text-cream">
@@ -96,7 +97,7 @@ export default function Nav() {
       </nav>
       <nav
         aria-label="Secondary"
-        className="pointer-events-none fixed bottom-0 left-0 right-0 z-50 flex items-end justify-between bg-gradient-to-t from-background from-55% to-transparent px-[clamp(17px,2.9vw,34px)] pb-[clamp(12px,1.7vw,22px)] pt-8"
+        className="pointer-events-none fixed bottom-0 left-0 right-0 z-50 flex items-end justify-between px-[clamp(17px,2.9vw,34px)] pb-[clamp(12px,1.7vw,22px)] pt-8"
       >
         <Link
           href="/about"
