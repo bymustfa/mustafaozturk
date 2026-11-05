@@ -2,37 +2,33 @@
 module.exports = {
   darkMode: ["class"],
   content: [
-    './pages/**/*.{ts,tsx}',
-    './components/**/*.{ts,tsx}',
-    './app/**/*.{ts,tsx}',
-    './src/**/*.{ts,tsx}',
-	],
+    "./pages/**/*.{ts,tsx}",
+    "./components/**/*.{ts,tsx}",
+    "./app/**/*.{ts,tsx}",
+    "./src/**/*.{ts,tsx}",
+  ],
   theme: {
     screens: {
-      sm: '480px',
-      md: '720px',
-      lg: '976px',
-      xl: '1440px',
-    },
-    container: {
-      center: true,
-      padding: "2rem",
-      screens: {
-        "2xl": "1400px",
-      },
-      
+      sm: "480px",
+      md: "720px",
+      lg: "976px",
+      xl: "1440px",
     },
     extend: {
-      fontFamily:{
-        poppins: ['var(--font-poppins)'],
-        rubik: ['var(--font-rubik)']
+      fontFamily: {
+        sans: ["var(--font-sans)", "ui-sans-serif", "system-ui", "sans-serif"],
+        stamp: ["var(--font-stamp)", "Impact", "sans-serif"],
+        serif: ["var(--font-serif)", "Georgia", "serif"],
       },
       colors: {
+        background: "#0a0a0a",
+        foreground: "#f1eec0",
+        cream: "#f1eec0",
+        "accent-red": "#ea4530",
+        "accent-blue": "#3aa1d8",
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
-        background: "hsl(var(--background))",
-        foreground: "hsl(var(--foreground))",
         primary: {
           DEFAULT: "hsl(var(--primary))",
           foreground: "hsl(var(--primary-foreground))",
@@ -68,20 +64,30 @@ module.exports = {
         sm: "calc(var(--radius) - 4px)",
       },
       keyframes: {
-        "accordion-down": {
-          from: { height: 0 },
-          to: { height: "var(--radix-accordion-content-height)" },
+        marquee: {
+          from: { transform: "translateX(0)" },
+          to: { transform: "translateX(-50%)" },
         },
-        "accordion-up": {
-          from: { height: "var(--radix-accordion-content-height)" },
-          to: { height: 0 },
+        "hero-in": {
+          from: {
+            opacity: "0",
+            transform: "translateY(14px)",
+            filter: "blur(8px)",
+          },
+          to: {
+            opacity: "1",
+            transform: "translateY(0)",
+            filter: "blur(0)",
+          },
         },
       },
       animation: {
-        "accordion-down": "accordion-down 0.2s ease-out",
-        "accordion-up": "accordion-up 0.2s ease-out",
+        marquee: "marquee 36s linear infinite",
+        "marquee-slow": "marquee 56s linear infinite",
+        tiles: "marquee 42s linear infinite",
+        "hero-in": "hero-in 0.8s cubic-bezier(0.22, 1, 0.36, 1) both",
       },
     },
   },
   plugins: [require("tailwindcss-animate")],
-}
+};

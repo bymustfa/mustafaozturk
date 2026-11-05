@@ -1,89 +1,107 @@
 import type { Metadata } from "next";
+import type { ReactNode } from "react";
+import { Anton, Archivo, Libre_Baskerville } from "next/font/google";
 import "./globals.css";
-import { Poppins, Rubik } from "next/font/google";
-import { cn, siteConfig } from "@/lib/utils";
-import Navbar from "@/components/Navbar";
+import Nav from "@/components/site/Nav";
+import { T } from "@/components/site/LangText";
+import { site } from "@/lib/content";
 
-const poppins = Poppins({
-  subsets: ["latin"],
-  weight: "400",
-  variable: "--font-poppins",
+const sans = Archivo({
+  subsets: ["latin", "latin-ext"],
+  variable: "--font-sans",
+  display: "swap",
 });
 
-const rubik = Rubik({
-  subsets: ["latin"],
-  weight: "600",
-  variable: "--font-rubik",
+const stamp = Anton({
+  subsets: ["latin", "latin-ext"],
+  weight: "400",
+  variable: "--font-stamp",
+  display: "swap",
+});
+
+const serif = Libre_Baskerville({
+  subsets: ["latin", "latin-ext"],
+  weight: "400",
+  style: ["normal", "italic"],
+  variable: "--font-serif",
+  display: "swap",
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL(site.url),
   title: {
-    default: siteConfig.name,
-    template: `%s - Software Developer`,
+    default: site.title,
+    template: `%s — ${site.name}`,
   },
-  description: siteConfig.description,
-
-  // added new keywords for seo
+  description: site.description,
+  applicationName: site.name,
   keywords: [
-    "portfolio",
-    "mustafa öztürk",
-    "mustafa öztürk kim",
-    "mustafa öztürk portfolio",
-    "web developer",
+    "Mustafa Öztürk",
+    "Mustafa Ozturk",
+    "bymustfa",
     "software developer",
-    "programmer",
+    "full-stack",
+    "yazılım geliştirici",
+    "Istanbul",
+    "Vodafone",
   ],
-  authors: [
-    {
-      name: "Mustafa ÖZTÜRK",
-      url: "https://github.com/bymustfa",
-    },
-  ],
-  creator: "Mustafa ÖZTÜRK",
-
+  authors: [{ name: site.name, url: site.links.github }],
+  creator: site.name,
+  alternates: { canonical: "/" },
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: siteConfig.url,
-    title: siteConfig.name,
-    description: siteConfig.description,
-    images: [`${siteConfig.url}/images/me.jpg`],
-    siteName: siteConfig.name,
+    url: site.url,
+    siteName: site.name,
+    title: site.title,
+    description: site.description,
   },
   twitter: {
     card: "summary_large_image",
-    title: siteConfig.name,
-    description: siteConfig.description,
-    images: [`${siteConfig.url}/images/me.jpg`],
-    creator: "@_bymustfa",
+    title: site.title,
+    description: site.description,
+    creator: site.twitter,
   },
-  icons: {
-    icon: "/favicon.ico",
-  },
-  robots: "index, follow",
+  robots: { index: true, follow: true },
+  icons: { icon: "/favicon.ico" },
 };
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+const personJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  name: "Mustafa Öztürk",
+  alternateName: "bymustfa",
+  jobTitle: "Software Developer",
+  url: site.url,
+  homeLocation: "Istanbul",
+  worksFor: { "@type": "Organization", name: "Vodafone Türkiye" },
+  sameAs: [site.links.github, site.links.linkedin, site.links.x, site.links.medium],
+};
+
+export default function RootLayout({ children }: { children: ReactNode }) {
   return (
-    <html lang="en">
-      <head>
-        <meta charSet="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta name="author" content="Mustafa ÖZTÜRK" />
-      </head>
-      <body className={`${poppins.variable} ${rubik.variable}`}>
-        <main
-          className={cn(
-            "flex relative screen break-words min-h-screen items-center justify-between py-14  px-40 max-md:p-4 bg-transparent max-sm:pb-20 bg-[radial-gradient(#2f7df4_1px,transparent_1px)] [background-size:16px_16px]",
-            { "bg-white": "#E6E7EB" },
-          )}
-        >
+    <html
+      lang="en"
+      data-lang="en"
+      suppressHydrationWarning
+      className={`${sans.variable} ${stamp.variable} ${serif.variable} h-full antialiased`}
+    >
+      <body className="flex min-h-full flex-col bg-background font-sans text-foreground">
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `(function(){try{var l=localStorage.getItem("mo-lang");if(l==="tr"){document.documentElement.dataset.lang="tr";document.documentElement.lang="tr";}else{document.documentElement.dataset.lang="en";document.documentElement.lang="en";}}catch(e){}})();`,
+          }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(personJsonLd) }}
+        />
+        <a href="#content" className="skip-link">
+          <T en="Skip to content" tr="İçeriğe geç" />
+        </a>
+        <Nav />
+        <main id="content" className="flex-1">
           {children}
-          <Navbar />
         </main>
       </body>
     </html>
