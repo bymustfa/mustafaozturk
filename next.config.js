@@ -1,6 +1,7 @@
 /** @type {import('next').NextConfig} */
 
 const nextConfig = {
+  output: "standalone",
   serverExternalPackages: ["@react-email/render", "rss-parser"],
   images: {
     remotePatterns: [

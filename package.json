@@ -2,6 +2,10 @@
   "name": "mustafaozturk",
   "version": "0.1.0",
   "private": true,
+  "packageManager": "pnpm@12.16.1",
+  "engines": {
+    "node": ">=22"
+  },
   "scripts": {
     "dev": "next dev",
     "build": "next build",

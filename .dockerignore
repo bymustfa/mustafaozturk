@@ -1,0 +1,15 @@
+node_modules
+.next
+.git
+.github
+Dockerfile
+.dockerignore
+npm-debug.log
+pnpm-debug.log
+yarn-debug.log
+yarn-error.log
+*.md
+.idea
+.vercel
+coverage
+out
